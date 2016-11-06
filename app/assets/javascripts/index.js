@@ -9,5 +9,15 @@ function surveySubmitListener(formClass){
   $(formClass).on('submit', function(event){
     event.preventDefault();
     console.log(":D");
+
+    var form = $(this);
+    var data = form.serialize();
+    var redirectPath = $(formClass + ' ' + 'input[name="redirect-path"]').val();
+
+    // console.log(redirectPath);
+
+    setTimeout(function () {
+       window.location.href = "/" + redirectPath;
+    }, 5000);
   })
 }

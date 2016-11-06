@@ -54,8 +54,10 @@
   </fieldset>
 
   <% if pre?(@form_id) %>
+    <input type="hidden" name="redirect-path" value="tips">
     <button data-toggle="modal" data-target="#thanks-before">Submit</button>
   <% else %>
+    <input type="hidden" name="redirect-path" value="splash">
     <button data-toggle="modal" data-target="#thanks-after">Submit</button>
   <% end %>
 
