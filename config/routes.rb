@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   end
 
   get '/tips', :to => 'index#tips'
-  get '/thanks', :to => 'index#thanks'
+  get '/splash', :to => 'index#splash'
 end
