@@ -1,3 +1,24 @@
-<img src="<%= Faker::Avatar.image %>">
+<div class="modal fade" id="thanks-after" role="dialog">
+    <div class="modal-dialog">
 
-<p>Thanks for your response! Hope you liked your Humanize session!</p>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Thank You's</h4>
+        </div>
+        <div class="modal-body">
+
+          <img src="<%= Faker::Avatar.image %>">
+
+          <p>Thanks for your response! Hope you liked your Humanize session!</p>
+
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
