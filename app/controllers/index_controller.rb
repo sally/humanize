@@ -7,7 +7,14 @@ class IndexController < ApplicationController
   end
 
   def survey
-
+    if params[:type] == 'before'
+      @form_action = "before"
+    elsif params[:type] == 'after'
+      @form_action = "after"
+    else
+      # error msg
+      render '404'
+    end
   end
 
   def tips
