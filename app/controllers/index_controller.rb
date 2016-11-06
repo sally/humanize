@@ -13,7 +13,7 @@ class IndexController < ApplicationController
       @form_action = "after"
     else
       # error msg
-      render '404'
+      render "layouts/404"
     end
   end
 
