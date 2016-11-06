@@ -57,5 +57,7 @@
 </form>
 
 <% if pre?(@form_id) %>
-  WE'RE IN THE MAIN FRAME
+  <%= render partial: "layouts/thanks_after" %>
+<% else %>
+  <%= render partial: "layouts/thanks_before" %>
 <% end %>
