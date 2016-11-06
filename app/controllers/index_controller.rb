@@ -8,9 +8,9 @@ class IndexController < ApplicationController
 
   def survey
     if params[:type] == 'before'
-      @form_action = "before"
+      @form_id = "before-survey-form"
     elsif params[:type] == 'after'
-      @form_action = "after"
+      @form_id = "after-survey-form"
     else
       # error msg
       render "layouts/404"
