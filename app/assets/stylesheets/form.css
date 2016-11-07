@@ -13,21 +13,36 @@ input:not(:focus):valid + .floating-label{
   position: relative;
   top: -20px;
   bottom: 0px;
-  left: -200px;
+  left: -300px;
   font-size: 11px;
   opacity: 1;
-}
-
-.inputText {
-  font-size: 14px;
-  width: 200px;
-  height: 35px;
 }
 
 .floating-label {
   position: relative;
   pointer-events: none;
-  left: -200px;
+  left: -300px;
   top: 0px;
   transition: 0.2s ease all;
+}
+
+.inputText {
+  width: 300px;
+  font-size: 14px;
+  height: 35px;
+}
+
+.input-text-container-lesser{
+  width:95%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.input-text-container{
+  margin-left: 2.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
