@@ -1,3 +1,14 @@
+input[type="range"]::-moz-range-track {
+  padding: 0 10px;
+  background: repeating-linear-gradient(to right,
+    #ccc,
+    #ccc 10%,
+    #000 10%,
+    #000 11%,
+    #ccc 11%,
+    #ccc 20%);
+}
+
 input[type=text] {
     background: transparent;
     border: none;
@@ -6,6 +17,7 @@ input[type=text] {
 
 input:focus{
   outline: none;
+    border-bottom: 1px solid #ff0000;
 }
 
 input:focus + .floating-label,
@@ -16,6 +28,7 @@ input:not(:focus):valid + .floating-label{
   left: -300px;
   font-size: 11px;
   opacity: 1;
+    color: #ff0000;
 }
 
 .floating-label {
