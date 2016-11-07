@@ -9,7 +9,7 @@ input[type="range"]::-moz-range-track {
     #ccc 20%);
 }
 
-input[type=text] {
+input[type=text], input[type=number] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #000000;
@@ -25,22 +25,22 @@ input:not(:focus):valid + .floating-label{
   position: relative;
   top: -20px;
   bottom: 0px;
-  left: -300px;
+  left: -75%;
   font-size: 11px;
   opacity: 1;
-    color: #ff0000;
+  color: #ff0000;
 }
 
 .floating-label {
   position: relative;
   pointer-events: none;
-  left: -300px;
+  left: -75%;
   top: 0px;
   transition: 0.2s ease all;
 }
 
 .inputText {
-  width: 300px;
+  width: 75%;
   font-size: 14px;
   height: 35px;
 }
