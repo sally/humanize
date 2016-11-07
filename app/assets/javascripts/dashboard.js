@@ -53,18 +53,15 @@ function mainHighchartsGenerator(args) {
         xAxis: {
             categories: [
                 'Question 1',
-                'Question2',
+                'Question 2',
                 'Question 3'
             ],
-            style: {
-              fontWeight: 'bold'
-            },
             crosshair: true
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Gucci (mm)'
+                text: 'Gucci'
             }
         },
         tooltip: {
