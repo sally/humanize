@@ -52,9 +52,9 @@ function mainHighchartsGenerator(args) {
         },
         xAxis: {
             categories: [
-                'Women',
-                'Men' //,
-                // 'Transgender'
+                'Question 1',
+                'Question2',
+                'Question 3'
             ],
             crosshair: true
         },
@@ -79,11 +79,11 @@ function mainHighchartsGenerator(args) {
             }
         },
         series: [{
-            name: 'Pre-survey',
+            name: 'Before-survey',
             data: [args.valueInt, args.valueInt, args.valueInt]
 
         }, {
-            name: 'Post-survey',
+            name: 'After-survey',
             data: [5, 4, 5]
 
         }
