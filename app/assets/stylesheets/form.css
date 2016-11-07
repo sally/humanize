@@ -1,3 +1,14 @@
+input[type="range"]::-moz-range-track {
+  padding: 0 10px;
+  background: repeating-linear-gradient(to right,
+    #ccc,
+    #ccc 10%,
+    #000 10%,
+    #000 11%,
+    #ccc 11%,
+    #ccc 20%);
+}
+
 input[type=text] {
     background: transparent;
     border: none;
@@ -6,6 +17,7 @@ input[type=text] {
 
 input:focus{
   outline: none;
+    border-bottom: 1px solid #ff0000;
 }
 
 input:focus + .floating-label,
@@ -13,21 +25,37 @@ input:not(:focus):valid + .floating-label{
   position: relative;
   top: -20px;
   bottom: 0px;
-  left: -200px;
+  left: -300px;
   font-size: 11px;
   opacity: 1;
-}
-
-.inputText {
-  font-size: 14px;
-  width: 200px;
-  height: 35px;
+    color: #ff0000;
 }
 
 .floating-label {
   position: relative;
   pointer-events: none;
-  left: -200px;
+  left: -300px;
   top: 0px;
   transition: 0.2s ease all;
+}
+
+.inputText {
+  width: 300px;
+  font-size: 14px;
+  height: 35px;
+}
+
+.input-text-container-lesser{
+  width:95%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.input-text-container{
+  margin-left: 2.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }

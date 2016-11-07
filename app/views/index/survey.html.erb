@@ -1,70 +1,78 @@
-<%= @form_id %>
+<form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 30%; margin: 0 auto;">
+  <div class="card">
+    <div class="card-block">
+      <fieldset style="padding: 0;">
+        <legend>About Me</legend>
 
-<form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 30%">
-  <fieldset>
-    <legend>About Me</legend>
-      <i class="fa fa-fw fa-transgender-alt" aria-hidden="true"></i>
-      <input type="text" class="inputText" required/>
-      <span class="floating-label">Gender</span>
-    <br><br>
-      <i class="fa fa-fw fa-birthday-cake" aria-hidden="true"></i>
-      <input type="text" class="inputText" required/>
-      <span class="floating-label">Age</span>
-    <br><br>
-      <i class="fa fa-fw fa-globe" aria-hidden="true"></i>
-      <input type="text" class="inputText" required/>
-      <span class="floating-label">Culture</span>
-    <br><br>
-  </fieldset>
+        <div class="input-text-container">
 
-  <fieldset>
-  	<legend>Self Reflection</legend>
-  	<label>I feel supported and accepted by my coworkers.</label>
-  	<input type="range" min="1" max="7" value="4" step="0.5" list="">
-  	<datalist id="">
-  		<option>1</option>
-  		<option>2</option>
-  		<option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <!-- <label>1</label> -->
-  	</datalist><br>
+          <div class="input-text-container-lesser">
+            <input type="text" class="inputText" required/>
+            <span class="floating-label"> Gender</span>
+          </div>
 
-  	<label>My surroundings promote a productive & collaborative environment.</label>
-  	<input type="range" min="1" max="7" value="4" step="0.5" list="">
-  	<datalist id="">
-  		<option>1</option>
-  		<option>2</option>
-  		<option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <!-- <label>1</label> -->
-  	</datalist><br>
+          <div class="input-text-container-lesser">
+            <i class="fa fa-fw fa-birthday-cake" aria-hidden="true"></i>
+            <input type="text" class="inputText" required/>
+            <span class="floating-label"> Age</span>
+          </div>
 
-  	<label>I value and respect diversity in gender, age, and culture.</label>
-  	<input type="range" min="1" max="7" value="4" step="0.5" list="">
-  	<datalist id="">
-  		<option>1</option>
-  		<option>2</option>
-  		<option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <!-- <label>1</label> -->
-  	</datalist>
-  </fieldset>
+          <div class="input-text-container-lesser">
+            <input type="text" class="inputText" required/>
+            <span class="floating-label"><i class="fa fa-fw fa-globe" aria-hidden="true"></i> Culture</span>
+          </div>
+
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-block">
+      <fieldset>
+      	<legend>Self Reflection</legend>
+      	<label>I feel supported and accepted by my coworkers.</label>
+      	<input type="range" min="1" max="5" value="3" step="1" list="datum1">
+      	<datalist id="datum1">
+      		<option>1</option>
+      		<option>2</option>
+      		<option>3</option>
+          <option>4</option>
+          <option>5</option>
+      	</datalist><br>
+
+      	<label>My surroundings promote a productive and collaborative environment.</label>
+      	<input type="range" min="1" max="5" value="3" step="1" list="datum2">
+      	<datalist id="datum2">
+      		<option>1</option>
+      		<option>2</option>
+      		<option>3</option>
+          <option>4</option>
+          <option>5</option>
+      	</datalist><br>
+
+      	<label>I value and respect diversity in gender, age, and culture.</label>
+      	<input type="range" min="1" max="7" value="4" step="0.5" list="">
+      	<datalist id="">
+      		<option>1</option>
+      		<option>2</option>
+      		<option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <!-- <label>1</label> -->
+      	</datalist>
+      </fieldset>
+    </div>
+  </div>
 
   <% if pre?(@form_id) %>
     <input type="hidden" name="redirect-path" value="tips">
-    <button data-toggle="modal" data-target="#thanks-before">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-before" style="width:75%; margin: 0 auto;">Submit</button>
   <% else %>
     <input type="hidden" name="redirect-path" value="splash">
-    <button data-toggle="modal" data-target="#thanks-after">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-after"　style="width:75%; margin: 0 auto;">Submit</button>
   <% end %>
 
 </form>
