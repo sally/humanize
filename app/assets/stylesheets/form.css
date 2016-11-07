@@ -1,0 +1,33 @@
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+input:focus{
+  outline: none;
+}
+
+input:focus + .floating-label,
+input:not(:focus):valid + .floating-label{
+  position: relative;
+  top: -20px;
+  bottom: 0px;
+  left: -200px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+}
+
+.floating-label {
+  position: relative;
+  pointer-events: none;
+  left: -200px;
+  top: 0px;
+  transition: 0.2s ease all;
+}
