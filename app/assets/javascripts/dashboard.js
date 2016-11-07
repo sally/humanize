@@ -53,8 +53,8 @@ function mainHighchartsGenerator(args) {
         xAxis: {
             categories: [
                 'Women',
-                'Men',
-                'Transgender'
+                'Men' //,
+                // 'Transgender'
             ],
             crosshair: true
         },
@@ -86,12 +86,16 @@ function mainHighchartsGenerator(args) {
             name: 'Post-survey',
             data: [5, 4, 5]
 
-        }, {
-            name: 'Something else',
-            data: [2, 3, 6]
+        }
 
-        }]
-    });
+        // , {
+        //     name: 'Something else',
+        //     data: [2, 3, 6]
+        //
+        // }
+      ]
+   }
+  );
 };
 
 // function to generate peripheral area chart
