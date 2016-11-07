@@ -1,12 +1,46 @@
-input[type="range"]::-moz-range-track {
-  padding: 0 10px;
-  background: repeating-linear-gradient(to right,
-    #ccc,
-    #ccc 10%,
-    #000 10%,
-    #000 11%,
-    #ccc 11%,
-    #ccc 20%);
+input[type="range"] {
+  position: relative;
+}
+
+input[type="range"]::before,
+input[type="range"]::after {
+  color: #aaa;
+  position: absolute;
+  top: 1em;
+}
+
+input[type="range"]::before {
+  content: attr(min);
+  left: 0;
+}
+
+
+input[type="range"]::after {
+  content: attr(max);
+  right: 0;
+}
+
+.Form-rangeValue {
+  color: #666;
+}
+
+.range-explainer{
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5em;
+}
+
+.reflection-question-container{
+  margin-bottom: 2em;
+}
+
+.range-explainer-low{
+  text-align: left;
+}
+
+.range-explainer-high{
+  text-align: right;
 }
 
 input[type=text], input[type=number] {

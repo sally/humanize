@@ -25,20 +25,75 @@
       Self-Reflection
     </div>
     <div class="card-block">
-      <div id="q1-slider"></div>
+      <div class="reflection-question-container">
+        I feel supported and accepted by my coworkers.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
 
-      <div id="q2-slider"></div>
+      <div class="reflection-question-container">
+        My surroundings promote a productive and collaborative environment.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
 
-      <div id="q3-slider"></div>
+      <div class="reflection-question-container">
+        I value and respect diversity in gender, age, and culture.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
+
     </div>
   </div>
 
   <% if pre?(@form_id) %>
     <input type="hidden" name="redirect-path" value="tips">
-    <button data-toggle="modal" data-target="#thanks-before" style="width:75%; margin: 0 auto;">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-before">Submit</button>
   <% else %>
     <input type="hidden" name="redirect-path" value="splash">
-    <button data-toggle="modal" data-target="#thanks-after"　style="width:75%; margin: 0 auto;">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-after">Submit</button>
   <% end %>
 
 </form>
