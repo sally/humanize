@@ -56,6 +56,9 @@ function mainHighchartsGenerator(args) {
                 'Question2',
                 'Question 3'
             ],
+            style: {
+              fontWeight: 'bold'
+            },
             crosshair: true
         },
         yAxis: {
