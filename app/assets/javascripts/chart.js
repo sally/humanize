@@ -1,6 +1,5 @@
 $(function () {
   Highcharts.theme = {
-    // 2b908f
   	colors: ['#2b908f', '#9AE185', '#90ee7e', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
   		'#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
   	chart: {
