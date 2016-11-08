@@ -17,7 +17,18 @@
     <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
   </head>
 
-  <!-- <nav style="background-color: #303031 ; height: 2em; margin-bottom: 2em;"></nav> -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="logo-container">
+          <span class="navbar-brand"><%= image_tag "h-bot-head.png", height: 70, width: 55 %></span>
+        </div>
+        <div class="brand-name-container">
+          Humanize<br>Bot
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <body>
     <%= yield %>
