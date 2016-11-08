@@ -132,6 +132,11 @@ select{
 
 /* Input range styling */
 
+.reflection-question-container{
+  margin: 5.75em 0;
+  font-size: 1.2em;
+}
+
 input[type="range"] {
   position: relative;
 }
@@ -144,14 +149,18 @@ input[type="range"]::after {
 }
 
 input[type="range"]::before {
-  content: attr(min);
+  /*content: attr(min);*/
+  content: 'disagree';
   left: 0;
+  font-size: 1em;
 }
 
 
 input[type="range"]::after {
-  content: attr(max);
+  /*content: attr(max);*/
+  content: 'agree';
   right: 0;
+  font-size: 1em;
 }
 
 .Form-rangeValue {
@@ -163,10 +172,6 @@ input[type="range"]::after {
   display: flex;
   justify-content: space-between;
   margin-top: .5em;
-}
-
-.reflection-question-container{
-  margin: 5.75em 0;
 }
 
 .range-explainer-low{
