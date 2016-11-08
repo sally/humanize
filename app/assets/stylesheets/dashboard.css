@@ -2,3 +2,29 @@
   font-size: 48px;
   text-align: center;
 }
+
+#ee-subtitle-container {
+  font-size: 24;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#jumbo-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #FFF;
+}
+
+#dashboard-header {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#carousel-container {
+  height: 200%;
+  width: 75%;
+  
+}
