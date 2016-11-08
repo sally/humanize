@@ -1,19 +1,26 @@
 <div class="survey-container">
-  <h1 class="survey-header">How do you self-identify?</h1>
 
   <form id="<%= @form_id %>" class="survey"  action="http://humanize-api.herokuapp.com/api/responders" method="post">
-    <input class="survey-question" type="text" placeholder="Gender" /required>
+    <div id="before-survey-questions">
+      <h1 class="survey-header">How do you self-identify?</h1>
 
-    <input class="survey-question" type="number" placeholder="Age" /required>
+      <input class="survey-question" type="text" placeholder="Gender" /required>
 
-    <select class="survey-question" style="width: 100%;">
-      <option selected="true" disabled="disabled">Position</option>
-      <option value="1">C-Level</option>
-      <option value="2">Senior</option>
-      <option value="3">Manager</option>
-      <option value="4">Staff</option>
-    </select>
+      <input class="survey-question" type="number" placeholder="Age" /required>
 
-    <button type="button" class="btn survey-submit" id="next-survey" data-toggle="modal" data-target="#thanks-before">Next</button>
+      <select class="survey-question" style="width: 100%;">
+        <option selected="true" disabled="disabled">Position</option>
+        <option value="1">C-Level</option>
+        <option value="2">Senior</option>
+        <option value="3">Manager</option>
+        <option value="4">Staff</option>
+      </select>
+
+      <button type="button" class="btn survey-button" id="next-survey-btn"><span>Next</span></button>
+    </div>
+
+    <div id="after-survey-questions">
+      The thing!
+    </div>
   </form>
 </div>

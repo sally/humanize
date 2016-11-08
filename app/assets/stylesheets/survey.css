@@ -1,6 +1,26 @@
 .survey-container{
+  position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#before-survey-questions{
+  position: absolute;
   width: 50%;
-  margin: 0 auto;
+  top: 100px;
+  margin-left: -25%;
+  left: 50%;
+}
+
+#after-survey-questions{
+    position: absolute;
+    width: 50%;
+    left: 150%;
+    top: 100px;
+    margin-left: -25%;
 }
 
 .survey-header{
@@ -13,9 +33,11 @@
 }
 
 .survey-question{
-  margin: 5em 0;
+  margin: 5.75em 0;
   display:block;
 }
+
+/* Input text styling */
 
 input[type="text"], input[type="number"]{
   background: transparent;
@@ -28,6 +50,8 @@ input:focus{
   outline: none;
   border-bottom: 1px solid #000;
 }
+
+/* Select (drop-down menu styling) */
 
 select[class="survey-question"]{
   -webkit-appearance: none;
@@ -51,26 +75,56 @@ select{
   color: #949596;
 }
 
-.survey-submit{
+/* Button styling */
+
+/* Makes survey button stick to right and rounds corners. Also makes font-color inside of button white */
+.survey-button{
   float: right;
   border-radius: 5px;
   color: white;
+  transition: all 0.5s;
 }
 
-.survey-submit:hover{
+/* Makes survey button text still be white when you hover over it */
+.survey-button:hover{
   color: white;
 }
 
-.survey-submit:focus{
+/* Makes it so that when you click the button, it doesn't have an outline around it */
+.survey-button:focus{
   outline: none !important;
 }
 
-
-
-#next-survey{
+/* "Next" button in pre-survey is pastel pink colour */
+#next-survey-btn{
   background-color: #f09e9a;
 }
 
-#next-survey:hover{
+/*#next-survey-btn:hover{
   background-color: #c07e7b;
+}*/
+
+#next-survey-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#next-survey-btn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#next-survey-btn:hover span {
+  padding-right: 12px;
+}
+
+#next-survey-btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
