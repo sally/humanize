@@ -59,6 +59,7 @@
   flex-direction: row;
   width: 80%;
   margin: 0 auto;
+  padding-right: 4.75em;
 }
 
 #gauge-container {
