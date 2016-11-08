@@ -1,6 +1,4 @@
 $(document).on('ready', function(){
-  console.log("We're in");
-
   $('#next-survey-btn').click(function() {
 
     $('#before-survey-questions').animate({
