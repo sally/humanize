@@ -10,7 +10,7 @@
 #before-survey-questions{
   position: absolute;
   width: 50%;
-  top: 100px;
+  /*top: 100px;*/
   margin-left: -25%;
   left: 50%;
 }
@@ -19,7 +19,7 @@
     position: absolute;
     width: 50%;
     left: 150%;
-    top: 100px;
+    /*top: 100px;*/
     margin-left: -25%;
 }
 
@@ -127,4 +127,51 @@ select{
 #next-survey-btn:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* Input range styling */
+
+input[type="range"] {
+  position: relative;
+}
+
+input[type="range"]::before,
+input[type="range"]::after {
+  color: #aaa;
+  position: absolute;
+  top: 1em;
+}
+
+input[type="range"]::before {
+  content: attr(min);
+  left: 0;
+}
+
+
+input[type="range"]::after {
+  content: attr(max);
+  right: 0;
+}
+
+.Form-rangeValue {
+  color: #666;
+}
+
+.range-explainer{
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5em;
+}
+
+.reflection-question-container{
+  margin: 5.75em 0;
+}
+
+.range-explainer-low{
+  text-align: left;
+}
+
+.range-explainer-high{
+  text-align: right;
 }
