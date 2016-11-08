@@ -49,10 +49,16 @@ function mainHighchartsGenerator(args) {
           },
         xAxis: {
             categories: [
-                'Question 1',
-                'Question 2',
-                'Question 3'
+                'My surroundings promote a productive and collaborative environment.',
+                'I feel supported and accepted by my coworkers.',
+                'I value and respect diversity in gender, age, and culture.'
             ],
+            labels: {
+              style: {
+                fontSize: '16px',
+                // fontWeight: 'bold'
+              }
+            },
             crosshair: true
         },
         yAxis: {
@@ -62,13 +68,18 @@ function mainHighchartsGenerator(args) {
             }
         },
         tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+            headerFormat: '<span style="font-size:15px, width: 5em;">{series.question}</span><table>',
+            // pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                // '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
             footerFormat: '</table>',
-            shared: true,
+            // shared: true,
             useHTML: true
         },
+        // tooltip: {
+        //   formatter: function() {
+        //     return 'I feel supported and accepted by my coworkers.'
+        //   }
+        // },
         plotOptions: {
             column: {
                 pointPadding: 0.2,
@@ -77,7 +88,8 @@ function mainHighchartsGenerator(args) {
         },
         series: [{
             name: 'Before-survey',
-            data: [args.valueInt, args.valueInt, args.valueInt]
+            data: [args.valueInt, args.valueInt, args.valueInt],
+            question: ["Q1", "Q2", "Q3"]
 
         }, {
             name: 'After-survey',
@@ -120,9 +132,6 @@ function areaHighChartsGenerator(args) {
                 'Tuesday',
                 'Wednesday',
                 'Thursday',
-                'Friday',
-                'Saturday',
-                'Sunday'
             ]
         },
         yAxis: {
@@ -144,10 +153,10 @@ function areaHighChartsGenerator(args) {
         },
         series: [{
             name: 'John',
-            data: [3, 4, 3, 5, 4, 10, 12]
+            data: [3, 4, 10, 12]
         }, {
             name: 'Jane',
-            data: [1, 3, 4, 3, 3, 5, 4]
+            data: [1, 3, 5, 4]
         }]
     });
 };
@@ -177,7 +186,7 @@ function activityGaugeHighchartsGenerator(args) {
             pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
             positioner: function (labelWidth) {
                 return {
-                    x: 360 - labelWidth / 2,
+                    x: 350 - labelWidth / 2,
                     y: 180
                 };
             }

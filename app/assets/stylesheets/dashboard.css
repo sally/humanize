@@ -2,13 +2,15 @@
 #ee-title-container {
   font-size: 48px;
   text-align: center;
+
 }
 
 #ee-subtitle-container {
-  font-size: 24;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 1em;
+  /*letter-spacing: .3em;*/
 }
 
 /* Encompassses all charts */
@@ -21,9 +23,10 @@
 /* Main Chart */
 #carousel-container {
   height: 200%;
-  width: 75%;
+  width: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin: 0 auto;
   padding-top: 1em;
 }
@@ -33,17 +36,26 @@
 }
 
 .fa fa-angle-left fa-5x {
-  color: black;
+  color: black !important;
 }
 
 #main-chart-container {
-  width: 90%;
+  width: 80%;
   height: 50%;
 }
 
 #right-arrow-container {
   width: 5%;
   text-align: right;
+  color: #d3d3d3;
+}
+
+.fa fa-angle-right fa-5x {
+  color: #d3d3d3;
+}
+
+.fa {
+  margin-bottom: 1em;
 }
 
 /* CSS for bottom charts */
@@ -54,28 +66,58 @@
   flex-direction: row;
   width: 80%;
   margin: 0 auto;
+  padding-right: 4.75em;
 }
 
 #gauge-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   height: 75%;
+}
+
+#gauge-header {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  z-index: 1;
 }
 
 #growth-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  height: 75%;
+  height: 100%;
+}
+
+#growth-header {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1em;
+
 }
 
 #activity-gauge-container {
-  width: 48%;
-  height: 25%;
+  width: 100%;
+  height: 100%;
+  margin-top: -3em;
+
 }
 
 #area-chart-container {
-  width: 48%;
-  height: 25%;
+  width: 90%;
+  height: 100%;
+}
+
+/* Extra div */
+#extra-space {
+  height: 10em;
 }
