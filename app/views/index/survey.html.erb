@@ -88,6 +88,17 @@
           <option>7</option>
         </datalist>
       </div>
+
+      <% if pre?(@form_id) %>
+        <input type="hidden" name="redirect-path" value="tips">
+        <button data-toggle="modal" data-target="#thanks-before" id="submit-survey-btn" class="btn  survey-button">Submit</button>
+      <% else %>
+        <input type="hidden" name="redirect-path" value="splash">
+        <button data-toggle="modal" data-target="#thanks-after" id="submit-survey-btn" class="btn  survey-button">Submit</button>
+      <% end %>
     </div> <!-- End of after-survey questions div -->
   </form>
 </div>
+
+<%= render partial: "layouts/thanks_after" %>
+<%= render partial: "layouts/thanks_before" %>
