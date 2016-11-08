@@ -55,7 +55,8 @@ function mainHighchartsGenerator(args) {
             ],
             labels: {
               style: {
-                fontSize: '15.2px'
+                fontSize: '16px',
+                // fontWeight: 'bold'
               }
             },
             crosshair: true
