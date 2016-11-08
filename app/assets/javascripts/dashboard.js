@@ -177,7 +177,7 @@ function activityGaugeHighchartsGenerator(args) {
             pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
             positioner: function (labelWidth) {
                 return {
-                    x: 360 - labelWidth / 2,
+                    x: 350 - labelWidth / 2,
                     y: 180
                 };
             }

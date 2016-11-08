@@ -21,9 +21,10 @@
 /* Main Chart */
 #carousel-container {
   height: 200%;
-  width: 75%;
+  width: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin: 0 auto;
   padding-top: 1em;
 }
@@ -34,10 +35,11 @@
 
 .fa fa-angle-left fa-5x {
   color: black;
+
 }
 
 #main-chart-container {
-  width: 90%;
+  width: 80%;
   height: 50%;
 }
 
@@ -49,6 +51,10 @@
 
 .fa fa-angle-right fa-5x {
   color: #d3d3d3;
+}
+
+.fa {
+  margin-bottom: 1em;
 }
 
 /* CSS for bottom charts */
@@ -99,7 +105,7 @@
 }
 
 #activity-gauge-container {
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin-top: -3em;
 

@@ -94,10 +94,12 @@ $(function () {
   		}
   	},
   	credits: {
-  		style: {
-  			color: '#666'
-  		}
+  		// style: {
+  		// 	color: '#666'
+  		// }
+      enabled: false
   	},
+    exporting: { enabled: false },
   	labels: {
   		style: {
   			color: '#707073'
