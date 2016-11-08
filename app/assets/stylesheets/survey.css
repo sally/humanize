@@ -39,6 +39,7 @@ select[class="survey-question"]{
     padding-right: 1.5em;
     border-radius: 0;
     border: none;
+    border-bottom: 1px solid #000;
     background-color: transparent;
 }
 
@@ -46,7 +47,30 @@ select:focus{
   outline: none;
 }
 
-select
-{
-    color: #949596;
+select{
+  color: #949596;
+}
+
+.survey-submit{
+  float: right;
+  border-radius: 5px;
+  color: white;
+}
+
+.survey-submit:hover{
+  color: white;
+}
+
+.survey-submit:focus{
+  outline: none !important;
+}
+
+
+
+#next-survey{
+  background-color: #f09e9a;
+}
+
+#next-survey:hover{
+  background-color: #c07e7b;
 }
