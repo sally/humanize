@@ -11,8 +11,14 @@
   margin-bottom: 1em;
 }
 
-/* Main Chart */
+/* Encompassses all charts */
+#biggy-container {
+  display: flex;
+  flex-direction: column;
+}
 
+
+/* Main Chart */
 #carousel-container {
   height: 200%;
   width: 75%;
@@ -44,9 +50,24 @@
 
 #overall-charts-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
   width: 80%;
   margin: 0 auto;
+}
+
+#gauge-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+}
+
+#growth-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
 }
 
 #activity-gauge-container {
