@@ -1,3 +1,67 @@
+<style>
+input[type="range"]::-moz-range-track {
+padding: 0 10px;
+background: repeating-linear-gradient(to right,
+  #ccc,
+  #ccc 10%,
+  #000 10%,
+  #000 11%,
+  #ccc 11%,
+  #ccc 20%);
+}
+
+input[type=text] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+input:focus{
+  outline: none;
+  border-bottom: 1px solid #ff0000;
+}
+
+input:focus + .floating-label,
+input:not(:focus):valid + .floating-label{
+position: relative;
+top: -20px;
+bottom: 0px;
+left: -300px;
+font-size: 11px;
+opacity: 1;
+  color: #ff0000;
+}
+
+.floating-label {
+position: relative;
+pointer-events: none;
+left: -300px;
+top: 0px;
+transition: 0.2s ease all;
+}
+
+.inputText {
+width: 300px;
+font-size: 14px;
+height: 35px;
+}
+
+.input-text-container-lesser{
+width:95%;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+.input-text-container{
+margin-left: 2.75em;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+}
+</style>
+
 <form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 30%; margin: 0 auto;">
   <div class="card">
     <div class="card-block">
@@ -79,3 +143,172 @@
 
 <%= render partial: "layouts/thanks_after" %>
 <%= render partial: "layouts/thanks_before" %>
+
+
+
+<!-- V2 with alternative transitional placeholder -->
+
+<style>
+/* STYLING FOR INPUT TYPE: TEXT */
+
+input[type="text"] {
+  /*box-sizing: border-box;*/
+  height: calc(3em + 2px);
+  margin: 0 0 1em;
+  background: transparent;
+  border: none;
+  padding-bottom: 0em;
+  border-bottom: 1px solid #000;
+  resize: none;
+  outline: none;
+  width: 100%;
+  /*line-height: 1em;*/
+}
+
+/* Styling for placeholder text after animation */
+input[type="text"][required]:focus + label[placeholder]:before {
+  /*color: #00bafa;*/
+}
+input[type="text"][required]:focus + label[placeholder]:before,
+input[type="text"][required]:valid + label[placeholder]:before {
+  transition-duration: .2s;
+  transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+
+/* Styling for placeholder text before animation */
+input[type="text"][required]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+  float: left;
+  margin-left: .1em;
+  text-decoration: none;
+}
+input[type="text"][required] + label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+
+/* Styles placeholder after responder starts typing */
+input[type="text"][required] + label[placeholder]:before {
+  float: left;
+  content: attr(placeholder);
+  display: inline-block;
+  margin-left: .1em;
+  color: #898989;
+  /*white-space: nowrap;*/
+  transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+</style>
+
+<div id="survey-page-container">
+
+<form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 20%; margin: 0 auto;">
+
+  <div class="card">
+    <!-- Alternative to card headers: card titles. Explore -->
+    <div class="card-header">
+      About Me
+    </div>
+    <div class="card-block card-block text-xs-center">
+      <input type="text" /required>
+      <label alt="Gender" placeholder="Gender"></label>
+      <br><br>
+      <input type="text" /required>
+      <label alt="Age" placeholder="Age"></label>
+      <br><br>
+      <!-- Previously: had class="custom-select" from bootstrap -->
+      <select style="width: 100%;">
+        <option selected>Position</option>
+        <option value="1">C-Level</option>
+        <option value="2">Senior</option>
+        <option value="3">Manager</option>
+        <option value="4">Staff</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      Self-Reflection
+    </div>
+    <div class="card-block">
+      <div class="reflection-question-container">
+        I feel supported and accepted by my coworkers.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
+
+      <div class="reflection-question-container">
+        My surroundings promote a productive and collaborative environment.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
+
+      <div class="reflection-question-container">
+        I value and respect diversity in gender, age, and culture.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            agree
+          </div>
+          <div class="range-explainer-high">
+            disagree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+      </div>
+
+    </div>
+  </div>
+
+  <% if pre?(@form_id) %>
+    <input type="hidden" name="redirect-path" value="tips">
+    <button data-toggle="modal" data-target="#thanks-before" style="float: right;">Submit</button>
+  <% else %>
+    <input type="hidden" name="redirect-path" value="splash">
+    <button data-toggle="modal" data-target="#thanks-after" style="float: right;">Submit</button>
+  <% end %>
+
+</form>
+
+<%= render partial: "layouts/thanks_after" %>
+<%= render partial: "layouts/thanks_before" %>
+
+</div>

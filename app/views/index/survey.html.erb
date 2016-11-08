@@ -1,3 +1,5 @@
+<div id="survey-page-container">
+
 <form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 20%; margin: 0 auto;">
 
   <div class="card">
@@ -6,11 +8,12 @@
       About Me
     </div>
     <div class="card-block card-block text-xs-center">
-      <input type="text" placeholder="Gender" style="width: 100%;">
+      <input type="text" placeholder="Gender" /required>
       <br><br>
-      <input type="number" placeholder="Age" style="width: 100%;">
+      <input type="number" placeholder="Age" /required>
       <br><br>
-      <select class="custom-select" style="width: 100%;">
+      <!-- Previously: had class="custom-select" from bootstrap -->
+      <select style="width: 100%;">
         <option selected>Position</option>
         <option value="1">C-Level</option>
         <option value="2">Senior</option>
@@ -29,10 +32,10 @@
         I feel supported and accepted by my coworkers.
         <div class="range-explainer">
           <div class="range-explainer-low">
-            agree
+            disagree
           </div>
           <div class="range-explainer-high">
-            disagree
+            agree
           </div>
         </div>
         <input type="range" min="1" max="5" value="3" list="q1-answer"/>
@@ -49,10 +52,10 @@
         My surroundings promote a productive and collaborative environment.
         <div class="range-explainer">
           <div class="range-explainer-low">
-            agree
+            disagree
           </div>
           <div class="range-explainer-high">
-            disagree
+            agree
           </div>
         </div>
         <input type="range" min="1" max="5" value="3" list="q1-answer"/>
@@ -69,10 +72,10 @@
         I value and respect diversity in gender, age, and culture.
         <div class="range-explainer">
           <div class="range-explainer-low">
-            agree
+            disagree
           </div>
           <div class="range-explainer-high">
-            disagree
+            agree
           </div>
         </div>
         <input type="range" min="1" max="5" value="3" list="q1-answer"/>
@@ -90,13 +93,15 @@
 
   <% if pre?(@form_id) %>
     <input type="hidden" name="redirect-path" value="tips">
-    <button data-toggle="modal" data-target="#thanks-before">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-before" style="float: right;">Submit</button>
   <% else %>
     <input type="hidden" name="redirect-path" value="splash">
-    <button data-toggle="modal" data-target="#thanks-after">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-after" style="float: right;">Submit</button>
   <% end %>
 
 </form>
 
 <%= render partial: "layouts/thanks_after" %>
 <%= render partial: "layouts/thanks_before" %>
+
+</div>
