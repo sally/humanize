@@ -1,2 +1,17 @@
 <div class="survey-container">
-<span class=""></span>
+  <h1 class="survey-header">How do you self-identify?</h1>
+
+  <form id="<%= @form_id %>" class="survey"  action="http://humanize-api.herokuapp.com/api/responders" method="post">
+    <input class="survey-question" type="text" placeholder="Gender" /required>
+
+    <input class="survey-question" type="number" placeholder="Age" /required>
+
+    <select class="survey-question" style="width: 100%;">
+      <option selected="true" disabled="disabled">Position</option>
+      <option value="1">C-Level</option>
+      <option value="2">Senior</option>
+      <option value="3">Manager</option>
+      <option value="4">Staff</option>
+    </select>
+  </form>
+</div>
