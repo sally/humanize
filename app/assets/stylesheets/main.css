@@ -1,3 +1,30 @@
-/*body {
-  background-color: #277078;
-}*/
+body{
+  font-family: 'Hiragino Kaku Gothic Pro' !important;
+  padding-top: 120px;
+  background-color: #fff;
+}
+
+
+.navbar{
+  background-color:#fff;
+  height: 100px;
+}
+
+.navbar-header{
+  display:flex;
+}
+
+.logo-container, .brand-name-container{
+  height: 70px;
+}
+
+.logo-container{
+  width: 55px;
+}
+
+.brand-name-container{
+  padding-left: 1em;
+  text-transform:uppercase;
+  display:flex;
+  align-items: flex-end;
+}
