@@ -1,78 +1,100 @@
-<form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 30%; margin: 0 auto;">
+<form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/responders" method="post" style="width: 20%; margin: 0 auto;">
+
   <div class="card">
-    <div class="card-block">
-      <fieldset style="padding: 0;">
-        <legend>About Me</legend>
-
-        <div class="input-text-container">
-
-          <div class="input-text-container-lesser">
-            <input type="text" class="inputText" required/>
-            <span class="floating-label"> Gender</span>
-          </div>
-
-          <div class="input-text-container-lesser">
-            <i class="fa fa-fw fa-birthday-cake" aria-hidden="true"></i>
-            <input type="text" class="inputText" required/>
-            <span class="floating-label"> Age</span>
-          </div>
-
-          <div class="input-text-container-lesser">
-            <input type="text" class="inputText" required/>
-            <span class="floating-label"><i class="fa fa-fw fa-globe" aria-hidden="true"></i> Culture</span>
-          </div>
-
-        </div>
-      </fieldset>
+    <!-- Alternative to card headers: card titles. Explore -->
+    <div class="card-header">
+      About Me
+    </div>
+    <div class="card-block card-block text-xs-center">
+      <input type="text" placeholder="Gender" /required>
+      <br><br>
+      <input type="number" placeholder="Age" /required>
+      <br><br>
+      <!-- Previously: had class="custom-select" from bootstrap -->
+      <select style="width: 100%;">
+        <option selected>Position</option>
+        <option value="1">C-Level</option>
+        <option value="2">Senior</option>
+        <option value="3">Manager</option>
+        <option value="4">Staff</option>
+      </select>
     </div>
   </div>
 
   <div class="card">
+    <div class="card-header">
+      Self-Reflection
+    </div>
     <div class="card-block">
-      <fieldset>
-      	<legend>Self Reflection</legend>
-      	<label>I feel supported and accepted by my coworkers.</label>
-      	<input type="range" min="1" max="5" value="3" step="1" list="datum1">
-      	<datalist id="datum1">
-      		<option>1</option>
-      		<option>2</option>
-      		<option>3</option>
+      <div class="reflection-question-container">
+        I feel supported and accepted by my coworkers.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            disagree
+          </div>
+          <div class="range-explainer-high">
+            agree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
           <option>4</option>
           <option>5</option>
-      	</datalist><br>
+        </datalist>
+      </div>
 
-      	<label>My surroundings promote a productive and collaborative environment.</label>
-      	<input type="range" min="1" max="5" value="3" step="1" list="datum2">
-      	<datalist id="datum2">
-      		<option>1</option>
-      		<option>2</option>
-      		<option>3</option>
+      <div class="reflection-question-container">
+        My surroundings promote a productive and collaborative environment.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            disagree
+          </div>
+          <div class="range-explainer-high">
+            agree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
           <option>4</option>
           <option>5</option>
-      	</datalist><br>
+        </datalist>
+      </div>
 
-      	<label>I value and respect diversity in gender, age, and culture.</label>
-      	<input type="range" min="1" max="7" value="4" step="0.5" list="">
-      	<datalist id="">
-      		<option>1</option>
-      		<option>2</option>
-      		<option>3</option>
+      <div class="reflection-question-container">
+        I value and respect diversity in gender, age, and culture.
+        <div class="range-explainer">
+          <div class="range-explainer-low">
+            disagree
+          </div>
+          <div class="range-explainer-high">
+            agree
+          </div>
+        </div>
+        <input type="range" min="1" max="5" value="3" list="q1-answer"/>
+        <datalist id="q1-answer">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
           <option>4</option>
           <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <!-- <label>1</label> -->
-      	</datalist>
-      </fieldset>
+        </datalist>
+      </div>
+
     </div>
   </div>
 
   <% if pre?(@form_id) %>
     <input type="hidden" name="redirect-path" value="tips">
-    <button data-toggle="modal" data-target="#thanks-before" style="width:75%; margin: 0 auto;">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-before" style="float: right;">Submit</button>
   <% else %>
     <input type="hidden" name="redirect-path" value="splash">
-    <button data-toggle="modal" data-target="#thanks-after"　style="width:75%; margin: 0 auto;">Submit</button>
+    <button data-toggle="modal" data-target="#thanks-after" style="float: right;">Submit</button>
   <% end %>
 
 </form>
