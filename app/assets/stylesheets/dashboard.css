@@ -5,7 +5,7 @@
 }
 
 #ee-subtitle-container {
-  font-size: 24;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 1em;
@@ -44,6 +44,11 @@
 #right-arrow-container {
   width: 5%;
   text-align: right;
+  color: #d3d3d3;
+}
+
+.fa fa-angle-right fa-5x {
+  color: #d3d3d3;
 }
 
 /* CSS for bottom charts */
@@ -59,23 +64,52 @@
 #gauge-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   height: 75%;
+}
+
+#gauge-header {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  z-index: 1;
 }
 
 #growth-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  height: 75%;
+  height: 100%;
+}
+
+#growth-header {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1em;
+
 }
 
 #activity-gauge-container {
-  width: 48%;
-  height: 25%;
+  width: 90%;
+  height: 100%;
+  margin-top: -3em;
+
 }
 
 #area-chart-container {
-  width: 48%;
-  height: 25%;
+  width: 90%;
+  height: 100%;
+}
+
+/* Extra div */
+#extra-space {
+  height: 10em;
 }
