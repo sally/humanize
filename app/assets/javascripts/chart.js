@@ -11,14 +11,14 @@ $(function () {
   	},
   	title: {
   		style: {
-  			color: '#E0E0E3',
+  			color: '#000',
   			textTransform: 'uppercase',
   			fontSize: '20px'
   		}
   	},
   	subtitle: {
   		style: {
-  			color: '#E0E0E3',
+  			color: '#000',
   			textTransform: 'uppercase'
   		}
   	},
@@ -26,7 +26,7 @@ $(function () {
   		gridLineColor: '#707073',
   		labels: {
   			style: {
-  				color: '#E0E0E3'
+  				color: '#000'
   			}
   		},
   		lineColor: '#707073',
@@ -43,7 +43,7 @@ $(function () {
   		gridLineColor: '#707073',
   		labels: {
   			style: {
-  				color: '#E0E0E3'
+  				color: '#000'
   			}
   		},
   		lineColor: '#707073',
@@ -84,7 +84,7 @@ $(function () {
   	},
   	legend: {
   		itemStyle: {
-  			color: '#E0E0E3'
+  			color: '#000'
   		},
   		itemHoverStyle: {
   			color: '#FFF'

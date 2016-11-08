@@ -44,12 +44,9 @@ function mainHighchartsGenerator(args) {
         chart: {
             type: 'column'
         },
-        title: {
-            text: args.titleText
-        },
-        subtitle: {
-            text: 'Date: 11/05/16'
-        },
+          title: {
+            text: ""
+          },
         xAxis: {
             categories: [
                 'Question 1',
@@ -105,7 +102,7 @@ function areaHighChartsGenerator(args) {
             type: 'areaspline'
         },
         title: {
-            text: 'Average fruit consumption during one week'
+            text: ''
         },
         legend: {
             layout: 'vertical',
@@ -166,10 +163,7 @@ function activityGaugeHighchartsGenerator(args) {
         },
 
         title: {
-            text: 'Activity',
-            style: {
-                fontSize: '24px'
-            }
+            text: ''
         },
 
         tooltip: {
@@ -178,12 +172,12 @@ function activityGaugeHighchartsGenerator(args) {
             shadow: false,
             style: {
                 fontSize: '16px',
-                color: '#277078'
+                color: '#000'
             },
             pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
             positioner: function (labelWidth) {
                 return {
-                    x: 325 - labelWidth / 2,
+                    x: 360 - labelWidth / 2,
                     y: 180
                 };
             }
@@ -229,7 +223,7 @@ function activityGaugeHighchartsGenerator(args) {
         },
 
         series: [{
-            name: 'Move',
+            name: 'Q #1',
             borderColor: Highcharts.getOptions().colors[0],
             data: [{
                 color: Highcharts.getOptions().colors[0],
@@ -238,7 +232,7 @@ function activityGaugeHighchartsGenerator(args) {
                 y: 80
             }]
         }, {
-            name: 'Exercise',
+            name: 'Q #2',
             borderColor: Highcharts.getOptions().colors[1],
             data: [{
                 color: Highcharts.getOptions().colors[1],
@@ -247,7 +241,7 @@ function activityGaugeHighchartsGenerator(args) {
                 y: 65
             }]
         }, {
-            name: 'Stand',
+            name: 'Q #3',
             borderColor: Highcharts.getOptions().colors[2],
             data: [{
                 color: Highcharts.getOptions().colors[2],
@@ -262,42 +256,6 @@ function activityGaugeHighchartsGenerator(args) {
      * In the chart load callback, add icons on top of the circular shapes
      */
     function callback() {
-
-        // Move icon
-        this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
-            .attr({
-                'stroke': '#303030',
-                'stroke-linecap': 'round',
-                'stroke-linejoin': 'round',
-                'stroke-width': 2,
-                'zIndex': 10
-            })
-            .translate(190, 26)
-            .add(this.series[2].group);
-
-        // Exercise icon
-        this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8, 'M', 8, -8, 'L', 16, 0, 8, 8])
-            .attr({
-                'stroke': '#303030',
-                'stroke-linecap': 'round',
-                'stroke-linejoin': 'round',
-                'stroke-width': 2,
-                'zIndex': 10
-            })
-            .translate(190, 61)
-            .add(this.series[2].group);
-
-        // Stand icon
-        this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
-            .attr({
-                'stroke': '#303030',
-                'stroke-linecap': 'round',
-                'stroke-linejoin': 'round',
-                'stroke-width': 2,
-                'zIndex': 10
-            })
-            .translate(190, 96)
-            .add(this.series[2].group);
     });
 
 
