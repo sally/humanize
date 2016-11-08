@@ -1,15 +1,9 @@
 $(function () {
   Highcharts.theme = {
-  	colors: ['#2b908f', '#f45b5b', '#90ee7e', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
-  		'#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+  	colors: ['#277078', '#9AE185', '#EB5C57', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+  		'#55BF3B', '#DF5353', '#7798BF', '#aaeeee', '#6E6FB'],
   	chart: {
-  		backgroundColor: {
-  			linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
-  			stops: [
-  				[0, '#2a2a2b'],
-  				[1, '#3e3e40']
-  			]
-  		},
+  		backgroundColor: '#F3F3F3',
   		style: {
   			fontFamily: '\'Helvetica\', sans-serif'
   		},

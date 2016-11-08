@@ -52,16 +52,16 @@ function mainHighchartsGenerator(args) {
         },
         xAxis: {
             categories: [
-                'Women',
-                'Men' //,
-                // 'Transgender'
+                'Question 1',
+                'Question 2',
+                'Question 3'
             ],
             crosshair: true
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Gucci (mm)'
+                text: 'Gucci'
             }
         },
         tooltip: {
@@ -79,11 +79,11 @@ function mainHighchartsGenerator(args) {
             }
         },
         series: [{
-            name: 'Pre-survey',
+            name: 'Before-survey',
             data: [args.valueInt, args.valueInt, args.valueInt]
 
         }, {
-            name: 'Post-survey',
+            name: 'After-survey',
             data: [5, 4, 5]
 
         }
@@ -177,12 +177,13 @@ function activityGaugeHighchartsGenerator(args) {
             backgroundColor: 'none',
             shadow: false,
             style: {
-                fontSize: '16px'
+                fontSize: '16px',
+                color: '#277078'
             },
             pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
             positioner: function (labelWidth) {
                 return {
-                    x: 200 - labelWidth / 2,
+                    x: 325 - labelWidth / 2,
                     y: 180
                 };
             }
