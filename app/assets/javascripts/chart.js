@@ -1,9 +1,10 @@
 $(function () {
   Highcharts.theme = {
+    
   	colors: ['#277078', '#9AE185', '#EB5C57', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
   		'#55BF3B', '#DF5353', '#7798BF', '#aaeeee', '#6E6FB'],
   	chart: {
-  		backgroundColor: '#F3F3F3',
+  		backgroundColor: '#FFF',
   		style: {
   			fontFamily: '\'Helvetica\', sans-serif'
   		},
@@ -94,10 +95,12 @@ $(function () {
   		}
   	},
   	credits: {
-  		style: {
-  			color: '#666'
-  		}
+  		// style: {
+  		// 	color: '#666'
+  		// }
+      enabled: false
   	},
+    exporting: { enabled: false },
   	labels: {
   		style: {
   			color: '#707073'
