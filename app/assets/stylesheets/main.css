@@ -27,4 +27,6 @@ body{
   text-transform:uppercase;
   display:flex;
   align-items: flex-end;
+  font-weight: bold;
+  font-size: 1em;
 }

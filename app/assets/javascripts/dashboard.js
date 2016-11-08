@@ -132,9 +132,6 @@ function areaHighChartsGenerator(args) {
                 'Tuesday',
                 'Wednesday',
                 'Thursday',
-                'Friday',
-                'Saturday',
-                'Sunday'
             ]
         },
         yAxis: {
@@ -156,10 +153,10 @@ function areaHighChartsGenerator(args) {
         },
         series: [{
             name: 'John',
-            data: [3, 4, 3, 5, 4, 10, 12]
+            data: [3, 4, 10, 12]
         }, {
             name: 'Jane',
-            data: [1, 3, 4, 3, 3, 5, 4]
+            data: [1, 3, 5, 4]
         }]
     });
 };
