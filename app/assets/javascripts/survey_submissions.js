@@ -25,7 +25,7 @@ function surveySubmitListener(formClass){
     var responseTwoData = form.find('input').filter('#reflection-question-two').serialize();
     var responseThreeData = form.find('input').filter('#reflection-question-three').serialize();
 
-    var responseOneData = responseOneData + "%5Bresponse%5Dquestion_id=1"
+    var responseOneData = responseOneData + "&%5Bresponse%5Dquestion_id=1"
 
     console.log(responderData);
     console.log(responseOneData);
