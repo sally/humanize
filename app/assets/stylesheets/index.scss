@@ -18,10 +18,6 @@ p {
   color: transparentize($white, .5);
 }
 
-strong {
-  color: #fff;
-}
-
 section {
   height: 100%;
   color: #303031;
@@ -44,20 +40,46 @@ section {
   }
 
   &#three {
-    background: lighten($blue, 10);
+    // background: lighten($blue, 10);
     transition: all 1s;
+    background: #fff;
 
     &.is-active {
-      background: darken($blue, 10);
+      // background: darken($blue, 10);
     }
   }
 
   &#four {
-    background: darken($blue, 15);
+    // background: darken($blue, 15);
     transition: all 1s;
+    background: #fff;
 
     &.is-active {
-      background: #000000;
+      // background: #000000;
+    }
+  }
+
+  &#four {
+    background: #fff;
+
+    &.is-active {
+      // background: #000000;
+    }
+  }
+
+  &#five {
+    background: #fff;
+
+    &.is-active {
+      // background: #000000;
+    }
+  }
+
+  &#six {
+    background: #fff;
+
+    &.is-active {
+      // background: #000000;
     }
   }
 
@@ -149,5 +171,27 @@ section {
     font-size: 2.3em;
     line-height: 1.2em;
     letter-spacing: .05em;
+  }
+
+  .inner-container-three{
+    border-top: 1px solid black;
+    padding: 15% 0 0 0;
+    margin: 0;
+    text-align: center;
+    // font-size: 50px;
+  }
+
+  .inner-container-four{
+    border-top: 1px solid black;
+    padding: 15% 0 0 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .inner-container-five, .inner-container-six{
+    border-top: 1px solid black;
+    padding: 15% 0 0 0;
+    margin: 0;
+    text-align: center;
   }
 }
