@@ -10,18 +10,25 @@ function surveySubmitListener(formClass){
     event.preventDefault();
     console.log(":D");
 
-    $('#submit-survey-btn').click(function() {
-      $('#after-survey-questions').animate({
-          left: '-50%'
+    $('#after-survey-questions').animate({
+        left: '-50%'
       }, 500);
-
       // here is where i would animate another container to swoop in, IF I HAD ONE
-    });
 
     var form = $(this);
     var data = form.serialize();
 
-    
+    console.log(data);
+
+    var responderData = form.find('input', 'select').filter('.survey-question').serialize();
+    var responseOneData = form.find('input').filter('#reflection-question-one').serialize();
+    var responseTwoData = form.find('input').filter('#reflection-question-two').serialize();
+    var responseThreeData = form.find('input').filter('#reflection-question-two').serialize();
+
+    console.log(responderData);
+    console.log(responseOneData);
+    console.log(responseTwoData);
+    console.log(responseThreeData);
 
     // make AJAX request to POST to API
 

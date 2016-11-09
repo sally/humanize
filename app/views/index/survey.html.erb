@@ -5,11 +5,11 @@
       <h1 class="survey-header">How do you self-identify?</h1>
       <h5 class="survey-header-sub"></h5>
 
-      <input class="survey-question" type="text" placeholder="Gender" /required>
+      <input name="[responder]gender" class="survey-question" type="text" placeholder="Gender">
 
-      <input class="survey-question" type="number" placeholder="Age" /required>
+      <input name="[responder]age" class="survey-question" type="number" placeholder="Age">
 
-      <select class="survey-question" style="width: 100%;">
+      <select name="[responder]position" class="survey-question" style="width: 100%;">
         <option selected="true" disabled="disabled">Position</option>
         <option value="1">C-Level</option>
         <option value="2">Senior</option>
@@ -27,16 +27,8 @@
       <h5 class="survey-header-sub">(Remember, your responses are completely anonymous.)</h3>
 
       <div class="reflection-question-container">
-        <div class="reflection-question">I feel supported and accepted by my coworkers.</div>
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-
-          </div>
-          <div class="range-explainer-high">
-
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q1-answer"/>
+        <div class="reflection-question-text">I feel supported and accepted by my coworkers.</div>
+        <input name="response1_value" type="range" min="1" max="7" value="4" list="q1-answer" class="reflection-question" id="reflection-question-one" />
         <datalist id="q1-answer">
           <option>1</option>
           <option>2</option>
@@ -49,14 +41,8 @@
       </div>
 
       <div class="reflection-question-container">
-        <div class="reflection-question">My surroundings promote a productive and collaborative environment.</div>
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-          </div>
-          <div class="range-explainer-high">
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q2-answer"/>
+        <div class="reflection-question-text">My surroundings promote a productive and collaborative environment.</div>
+        <input name="response2_value" type="range" min="1" max="7" value="4" list="q2-answer" class="reflection-question" id="reflection-question-two" />
         <datalist id="q2-answer">
           <option>1</option>
           <option>2</option>
@@ -69,14 +55,8 @@
       </div>
 
       <div class="reflection-question-container">
-        <div class="reflection-question">I value and respect diversity in gender, age, and culture.</div>
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-          </div>
-          <div class="range-explainer-high">
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q3-answer"/>
+        <div class="reflection-question-text">I value and respect diversity in gender, age, and culture.</div>
+        <input name="response3_value" type="range" min="1" max="7" value="4" list="q3-answer" class="reflection-question" id="reflection-question-three" />
         <datalist id="q3-answer">
           <option>1</option>
           <option>2</option>

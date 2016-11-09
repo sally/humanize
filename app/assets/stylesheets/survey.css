@@ -145,8 +145,8 @@ select{
   font-size: 1.2em;
 }
 
-.reflection-question{
-  padding-bottom: 1em;
+.reflection-question-text{
+  padding-bottom: 1.5em;
 }
 
 input[type="range"] {
@@ -179,19 +179,4 @@ input[type="range"]::after {
 
 .Form-rangeValue {
   color: #666;
-}
-
-.range-explainer{
-  color: #aaa;
-  display: flex;
-  justify-content: space-between;
-  margin-top: .5em;
-}
-
-.range-explainer-low{
-  text-align: left;
-}
-
-.range-explainer-high{
-  text-align: right;
 }
