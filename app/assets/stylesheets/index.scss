@@ -24,6 +24,7 @@ strong {
 
 section {
   height: 100%;
+  color: #303031;
   // color: white;
   position: relative;
   text-align: center;
@@ -33,11 +34,12 @@ section {
   }
 
   &#two {
-    background: lighten($blue, 5);
+    // background: lighten($blue, 5);
+    background: #fff;
     transition: all 1s;
 
     &.is-active {
-      background: tomato;
+      // background: tomato;
     }
   }
 
@@ -82,7 +84,7 @@ section {
     text-justify: inter-word;
     font-size: 3em;
     line-height: 1.23em;
-    letter-spacing: .075em;
+    letter-spacing: 0.03em;
   }
 
   .main-bot-container{
@@ -93,5 +95,43 @@ section {
   #main-bot{
     width: 100%;
     height: auto;
+  }
+
+  .inner-container-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 5em;
+    // border: 1px solid red;
+  }
+
+  .info-container{
+    // border: 1px solid blue;
+  }
+
+  .info-container{
+    padding: 1.25em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-icon{
+    font-size: 10em;
+    margin-bottom: 0;
+  }
+
+  .icon-container{
+    // border: 1px solid green;
+  }
+
+  .info-text{
+    padding: 0 1em;
+    font-size: 2em;
+    line-height: 1.2em;
+    letter-spacing: .1em;
   }
 }
