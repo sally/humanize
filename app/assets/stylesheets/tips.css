@@ -6,6 +6,15 @@
   margin-left: -15em;
 }
 
+#helpful-tip {
+  color: #277078;
+  font-size: 78px;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-left: -2em;
+  letter-spacing: 3px;
+}
+
 /* Container for ASK Feedback */
 #ask-container {
   font-size: 48px;
