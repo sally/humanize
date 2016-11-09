@@ -8,16 +8,16 @@
 
 #helpful-tip {
   color: #277078;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 40px;
   margin-left: 4em;
   letter-spacing: 3px;
 }
 
 /* Container for ASK Feedback */
 #ask-container {
-  font-size: 48px;
+  font-size: 24px;
   margin: 0 auto;
   /*text-align: center;*/
   display: flex;
@@ -33,6 +33,7 @@
   margin-bottom: 15px;
   margin-top: 10px;
   margin-left: 1em;
+  font-size: 30px;
 }
 
 #ask-list {
@@ -57,7 +58,7 @@ ul li {
 
 /* Container for Active Listening */
 #listening-container {
-  font-size: 48px;
+  font-size: 24px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -71,10 +72,12 @@ ul li {
   margin-bottom: 15px;
   margin-top: 10px;
   margin-left: 1em;
+  font-size: 30px;
+  z-index: -1;
 }
 
 #listening-list {
   color: #303031;
-  margin-left: 2.5em;
+  margin-left: -9em;
   padding-left: -5px;
 }
