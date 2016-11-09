@@ -30,7 +30,21 @@ function surveySubmitListener(formClass){
     console.log(responseTwoData);
     console.log(responseThreeData);
 
-    // make AJAX request to POST to API
+    var request = $.ajax({
+      method: 'POST',
+      url: 'http://humanize-api.herokuapp.com/api/v1/companies/1/sessions/1/responders'
+      data: responderData
+    });
+
+    request.done(function(response){
+      console.log(response);
+    });
+
+    // var request = $.ajax({
+    //   method: 'POST',
+    //   url: 'http://humanize-api.herokuapp.com/api/v1/companies/1/sessions/1/responders'
+    //   data: responderData;
+    // });
 
     // change this later to be on AJAX success
 
