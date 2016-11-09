@@ -48,4 +48,15 @@ module HumanizeService
     url = API_ENDPOINT + "/companies/#{company_id}/sessions/#{session_id}/responders?before=false"
     response = HTTParty.get(url)
   end
+
+  # Method to get all gender responses from a session
+  # (get top 4 genders)
+  
+
+
+  # Method to get responses by age group from a session
+  # Age groups: 18-25, 25-40, 40-65, 65+
+
+  # Method to get responders by position level from a session
+  # Position levels: C-Level, Senior, Manager, Staff
 end
