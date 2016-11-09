@@ -26,6 +26,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 3em;
+  margin-left: 6em;
 }
 
 #active-listening {
@@ -40,14 +41,18 @@
   margin-left: 2.7em;
   margin-bottom: 2em;
   font-size: 2em;
+  letter-spacing: .05em;
 }
 
 .tips-list {
   color: #303031;
-  margin-left: 2.85em;
+  /*margin-left: 2.85em;*/
+  margin-left: 4em;
   padding-left: -5px;
   font-size: 1.5em;
   width: 100%;
+  list-style-type: square;
+
 }
 
 ul li {
