@@ -1,5 +1,5 @@
 #thankyou-main {
-  margin-left: 30px;
+  margin-left: 10em;
   padding: 50px;
   width: 55%
 }
@@ -8,23 +8,27 @@ div h1 {
   color: #277078;
   font-size: 50px;
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 1.2em;
+  letter-spacing: .12em;
 }
 
 div p {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+  width: 120%;
 }
 
 #thankyou-content p {
   color: #303031;
-  font-size: 20px;
-  text-align: justify;
+  font-size: 1.8em;
+  text-align: left;
+  width: 90%;
 }
 
 #thankyou-image {
   float: right;
-  margin-right: 100px;
+  margin-top: 22em;
+  margin-right: 8em;
   padding: 50px;
-  width: 36%
+  width: 25%;
 }

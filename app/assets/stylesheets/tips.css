@@ -56,6 +56,7 @@
   /*margin-bottom: 15px;
   margin-top: 10px;
   margin-left: 1em;*/
+  margin-left: 6em;
   font-size: 36px;
 }
 
@@ -73,9 +74,10 @@ ul li {
 /* Bot friends image */
 #bot-friends{
   float: right;
-  width: 15%;
-  margin-right: 24em;
-  margin-bottom: 3em;
+  width: 20%;
+  margin-left: 70em;
+  /*margin-right: 24em;*/
+  /*margin-bottom: 3em;*/
   z-index: 1;
 }
 
