@@ -1,45 +1,29 @@
+// we're checking to see if the arrow is up or down, then adding or removing the "lift" class accordingly
+var arrowBounce = function() {
+  var arrow = $(".arrow");
+
+  if (arrow.hasClass("lift")) {
+    arrow.removeClass("lift");
+  } else {
+    arrow.addClass("lift");
+  }
+};
+
+// run the arrowBounce function every 800ms
+setInterval(arrowBounce, 800);
+
+// make arrow disappear on
+$(window).scroll(function(){
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 30);
+  });
+
 $(document).on('ready', function(){
-  var ctrl = new ScrollMagic.Controller({
-    globalSceneOptions: {
-      triggerHook: 'onLeave'
-    }
-  });
-
-  $('section').each(function() {
-
-    var name = $(this).attr('id');
-
-    new ScrollMagic.Scene({
-      triggerElement: this
-    })
-    .setPin(this)
-    .addIndicators({
-      colorStart: "rgba(255,255,255,0.5)",
-      colorEnd: "rgba(255,255,255,0.5)",
-      colorTrigger : "rgba(255,255,255,1)",
-      name:name
-    })
-    .addTo(ctrl)
-  });
-
-  // get window height
-  var wh = window.innerHeight;
-
-  new ScrollMagic.Scene({
-    offset: wh*0.75
-  })
-  .setClassToggle("section#two", "is-active")
-  .addTo(ctrl);
-
-  new ScrollMagic.Scene({
-    offset: wh*1.75
-  })
-  .setClassToggle("section#three", "is-active")
-  .addTo(ctrl);
-
-  new ScrollMagic.Scene({
-    offset: wh*2.75
-  })
-  .setClassToggle("section#four", "is-active")
-  .addTo(ctrl);
+  smoothScroll.init({
+    selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+    selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+    speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+    easing: 'easeInOutCubic', // Easing pattern to use
+    offset: 200, // Integer. How far to offset the scrolling anchor location in pixels
+    callback: function ( anchor, toggle ) {} // Function to run after scrolling
+});
 })
