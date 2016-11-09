@@ -31,7 +31,7 @@ section {
 
   &#two {
     // background: lighten($blue, 5);
-    background: #fff;
+    // background: #fff;
     transition: all 1s;
 
     &.is-active {
@@ -42,7 +42,7 @@ section {
   &#three {
     // background: lighten($blue, 10);
     transition: all 1s;
-    background: #fff;
+    // background: #fff;
 
     &.is-active {
       // background: darken($blue, 10);
@@ -52,7 +52,7 @@ section {
   &#four {
     // background: darken($blue, 15);
     transition: all 1s;
-    background: #fff;
+    // background: #fff;
 
     &.is-active {
       // background: #000000;
@@ -60,7 +60,7 @@ section {
   }
 
   &#four {
-    background: #fff;
+    // background: #fff;
 
     &.is-active {
       // background: #000000;
@@ -68,7 +68,7 @@ section {
   }
 
   &#five {
-    background: #fff;
+    // background: #fff;
 
     &.is-active {
       // background: #000000;
@@ -76,7 +76,7 @@ section {
   }
 
   &#six {
-    background: #fff;
+    // background: #fff;
 
     &.is-active {
       // background: #000000;
@@ -174,7 +174,6 @@ section {
   }
 
   .inner-container-three{
-    border-top: 1px solid black;
     padding: 15% 0 0 0;
     margin: 0;
     text-align: center;
@@ -182,16 +181,33 @@ section {
   }
 
   .inner-container-four{
-    border-top: 1px solid black;
     padding: 15% 0 0 0;
     margin: 0;
     text-align: center;
   }
 
   .inner-container-five, .inner-container-six{
-    border-top: 1px solid black;
-    padding: 15% 0 0 0;
+    // padding: 15% 0 0 0;
+    padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // text-align: center;
+  }
+
+  .privacy-header{
+    font-size: 3.5em;
+    margin-bottom: 1em;
+    text-align: left;
+    width: 60%;
+  }
+
+  .privacy-text{
+    font-size: 2.25em;
+    width: 60%;
+    text-align: left;
+    letter-spacing: .025em;
   }
 }
