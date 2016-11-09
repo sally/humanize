@@ -50,16 +50,6 @@ section {
   }
 
   &#four {
-    // background: darken($blue, 15);
-    transition: all 1s;
-    // background: #fff;
-
-    &.is-active {
-      // background: #000000;
-    }
-  }
-
-  &#four {
     // background: #fff;
 
     &.is-active {
@@ -81,6 +71,7 @@ section {
     &.is-active {
       // background: #000000;
     }
+    height: auto;
   }
 
   .inner {
