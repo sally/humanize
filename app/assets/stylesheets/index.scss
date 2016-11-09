@@ -113,15 +113,29 @@ section {
   }
 
   .info-container{
-    padding: 1.25em 0;
+    padding: 2.6em 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .info-icon{
-    font-size: 10em;
-    margin-bottom: 0;
+    font-size: 7em;
+    margin: 0;
+    margin-left: 0;
+    // padding: 0 1em;
+  }
+
+  .info-icon-one{
+    color: #666;
+  }
+
+  .info-icon-two{
+    color: #666;
+  }
+
+  .info-icon-three{
+    color: #666;
   }
 
   .icon-container{
@@ -129,9 +143,11 @@ section {
   }
 
   .info-text{
-    padding: 0 1em;
-    font-size: 2em;
+    text-align: left;
+    padding: 0 1.75em;
+    width: 75%;
+    font-size: 2.3em;
     line-height: 1.2em;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
   }
 }
