@@ -1,6 +1,6 @@
 <div class="survey-container">
 
-  <form id="<%= @form_id %>" class="survey"  action="http://humanize-api.herokuapp.com/api/responders" method="post">
+  <form id="<%= @form_id %>" class="survey" action="http://humanize-api.herokuapp.com/api/v1/companies/1/sessions/1/responders" method="post">
     <div id="before-survey-questions">
       <h1 class="survey-header">How do you self-identify?</h1>
       <h5 class="survey-header-sub"></h5>
@@ -69,8 +69,12 @@
       </div>
 
       <% if pre?(@form_id) %>
+        <input type="hidden" name="responder[before]" value="true" class="survey-question">
+        <input type="hidden" name="responder[session_id]" value="1" class="survey-question">
         <button id="submit-survey-btn" class="btn survey-button"><span>Submit</span></button>
       <% else %>=
+        <input type="hidden" name="responder[before]" value="false" class="survey-question">
+        <input type="hidden" name="responder[session_id]" value="1" class="survey-question">
         <button id="submit-survey-btn" class="btn  survey-button"><span>Submit</span></button>
       <% end %>
     </div> <!-- End of after-survey questions div -->
