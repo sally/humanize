@@ -1,0 +1,38 @@
+#first-paragraph {
+  width: 36%;
+  margin-right: 0em;
+  margin-top: 8em;
+  margin-left: 3em;
+}
+
+#main-bot {
+  width: 36%;
+  height: auto;
+  float: right;
+  margin-top: -20em;
+  margin-right: 10em;
+}
+
+#green {
+  width: 200em;
+  height: 100px;
+  background: #B4F1A1;
+}
+
+#red {
+  width: 200em;
+  height: 100px;
+  background: #EB5C57;
+}
+
+#blue {
+  width: 200em;
+  height: 100px;
+  background: #277078;
+}
+
+#stripes {
+  width: 4000px;
+  /*height: 20px;*/
+  transform: rotate(337deg);
+}
