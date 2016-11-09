@@ -1,3 +1,4 @@
+/* CSS to style the arrow */
 .arrow {
   white-space: nowrap;
   font-size: 4rem;
@@ -20,6 +21,8 @@
   bottom: 64px;
 }
 
+/* CSS for nav bar for homepage */
+
 .homepage-nav-container{
   height: 90px;
   width: 50%;
@@ -29,9 +32,28 @@
   padding: 0;
   padding-right: 2em;
   margin: 0;
+  color: ;
 }
 
-.homepage-nav-container a{
+.homepage-nav-container a, .homepage-nav-container a:hover, .homepage-nav-container a:active{
   padding-left: 3em;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  color: #303031;
+  text-decoration: none;
+}
+
+.homepage-nav-container a:hover{
+  color: #277078;
+}
+
+/* CSS for dividers */
+.stripe{
+  width: 100%;
+  margin-top: -13.5em;
+}
+
+.first-stripe{
+  margin: 0;
+  margin-bottom: -5em;
 }
