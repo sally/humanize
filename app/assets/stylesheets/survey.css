@@ -14,6 +14,7 @@
   width: 50%;
   margin-left: -25%;
   left: 50%;
+  font-size: 1.2em;
 }
 
 #after-survey-questions{
@@ -33,7 +34,7 @@
 }
 
 .survey-question{
-  margin: 5.75em 0;
+  margin-bottom: 5.75em;
   display:block;
 }
 
@@ -96,19 +97,15 @@ select{
   color: #fff;
 }
 
-/* "Next" button in pre-survey is pastel pink colour */
-#next-survey-btn{
-  background-color: #f09e9a;
-}
-
-#next-survey-btn span {
+/* Survey buttons receieve a chevron upon hover and click */
+.survey-button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-#next-survey-btn span:after {
+.survey-button span:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -117,28 +114,45 @@ select{
   transition: 0.5s;
 }
 
-#next-survey-btn:hover span {
+.survey-button:hover span {
   padding-right: 12px;
 }
 
-#next-survey-btn:hover span:after {
+.survey-button:hover span:after {
   opacity: 1;
   right: 0;
 }
 
+/* "Next" button in pre-survey is pastel pink colour */
+#next-survey-btn{
+  background-color: #f09e9a;
+}
+
+/* "Submit" button in post-survey is a pastel pink colour */
 #submit-survey-btn{
   background-color: #95c57b;
 }
 
 /* Input range styling */
 
+.survey-header-sub{
+  margin: 0;
+  margin-bottom: 4em;
+}
+
 .reflection-question-container{
-  margin: 5.75em 0;
+  margin-bottom: 5.75em;
   font-size: 1.2em;
+}
+
+.reflection-question{
+  padding-bottom: 1em;
 }
 
 input[type="range"] {
   position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
 
 input[type="range"]::before,
@@ -152,7 +166,7 @@ input[type="range"]::before {
   /*content: attr(min);*/
   content: 'disagree';
   left: 0;
-  font-size: 1em;
+  font-size: .8em;
 }
 
 
@@ -160,7 +174,7 @@ input[type="range"]::after {
   /*content: attr(max);*/
   content: 'agree';
   right: 0;
-  font-size: 1em;
+  font-size: .8em;
 }
 
 .Form-rangeValue {

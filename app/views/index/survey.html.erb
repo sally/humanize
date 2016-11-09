@@ -3,6 +3,7 @@
   <form id="<%= @form_id %>" class="survey"  action="http://humanize-api.herokuapp.com/api/responders" method="post">
     <div id="before-survey-questions">
       <h1 class="survey-header">How do you self-identify?</h1>
+      <h5 class="survey-header-sub"></h5>
 
       <input class="survey-question" type="text" placeholder="Gender" /required>
 
@@ -23,10 +24,10 @@
 
     <div id="after-survey-questions">
       <h1 class="survey-header">Let's reflect!</h1>
-      <h5 class="survey-header">(Remember, your responses are completely anonymous.)</h3>
+      <h5 class="survey-header-sub">(Remember, your responses are completely anonymous.)</h3>
 
       <div class="reflection-question-container">
-        I feel supported and accepted by my coworkers.
+        <div class="reflection-question">I feel supported and accepted by my coworkers.</div>
         <div class="range-explainer">
           <div class="range-explainer-low">
 
@@ -48,7 +49,7 @@
       </div>
 
       <div class="reflection-question-container">
-        My surroundings promote a productive and collaborative environment.
+        <div class="reflection-question">My surroundings promote a productive and collaborative environment.</div>
         <div class="range-explainer">
           <div class="range-explainer-low">
           </div>
@@ -68,7 +69,7 @@
       </div>
 
       <div class="reflection-question-container">
-        I value and respect diversity in gender, age, and culture.
+        <div class="reflection-question">I value and respect diversity in gender, age, and culture.</div>
         <div class="range-explainer">
           <div class="range-explainer-low">
           </div>
@@ -88,15 +89,10 @@
       </div>
 
       <% if pre?(@form_id) %>
-        <input type="hidden" name="redirect-path" value="tips">
-        <button data-toggle="modal" data-target="#thanks-before" id="submit-survey-btn" class="btn  survey-button">Submit</button>
-      <% else %>
-        <input type="hidden" name="redirect-path" value="splash">
-        <button data-toggle="modal" data-target="#thanks-after" id="submit-survey-btn" class="btn  survey-button">Submit</button>
+        <button id="submit-survey-btn" class="btn survey-button"><span>Submit</span></button>
+      <% else %>=
+        <button id="submit-survey-btn" class="btn  survey-button"><span>Submit</span></button>
       <% end %>
     </div> <!-- End of after-survey questions div -->
   </form>
 </div>
-
-<%= render partial: "layouts/thanks_after" %>
-<%= render partial: "layouts/thanks_before" %>
