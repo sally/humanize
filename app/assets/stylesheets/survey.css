@@ -102,7 +102,7 @@ select{
   cursor: pointer;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .survey-button span:after {
@@ -111,7 +111,7 @@ select{
   opacity: 0;
   top: 0;
   right: -20px;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .survey-button:hover span {
@@ -175,8 +175,4 @@ input[type="range"]::after {
   content: 'agree';
   right: -1em;
   font-size: .8em;
-}
-
-.Form-rangeValue {
-  color: #666;
 }
