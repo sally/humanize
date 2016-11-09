@@ -19,3 +19,19 @@
 .lift {
   bottom: 64px;
 }
+
+.homepage-nav-container{
+  height: 90px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  padding-right: 2em;
+  margin: 0;
+}
+
+.homepage-nav-container a{
+  padding-left: 3em;
+  font-size: 1.1em;
+}
