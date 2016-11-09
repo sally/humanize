@@ -165,7 +165,7 @@ input[type="range"]::after {
 input[type="range"]::before {
   /*content: attr(min);*/
   content: 'disagree';
-  left: 0;
+  left: -1.75em;
   font-size: .8em;
 }
 
@@ -173,7 +173,7 @@ input[type="range"]::before {
 input[type="range"]::after {
   /*content: attr(max);*/
   content: 'agree';
-  right: 0;
+  right: -1em;
   font-size: .8em;
 }
 
