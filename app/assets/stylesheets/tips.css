@@ -19,12 +19,7 @@
 }
 
 .tip-section {
-  /*height: 100%;*/
-  /*width: 100%;*/
   align-content: center;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: center;*/
   margin-top: 1em;
   margin-left: 11.75em;
 }
@@ -51,7 +46,6 @@
 }
 
 ul li {
-  /*width: 70%;*/
   margin: 0 0 .4em 0;
 }
 
