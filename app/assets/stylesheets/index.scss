@@ -25,40 +25,9 @@ section {
   position: relative;
   text-align: center;
 
-  &#one {
-    // background: $blue;
-  }
+  
 
-  &#two {
-    // background: lighten($blue, 5);
-    // background: #fff;
-    transition: all 1s;
-
-    &.is-active {
-      // background: tomato;
-    }
-  }
-
-  &#three {
-    // background: lighten($blue, 10);
-    transition: all 1s;
-    // background: #fff;
-
-    &.is-active {
-      // background: darken($blue, 10);
-    }
-  }
-
-  &#four {
-    // background: #fff;
-
-    &.is-active {
-      // background: #000000;
-    }
-  }
-
-
-  &#six {
+  &#bye {
     // background: #fff;
 
     &.is-active {

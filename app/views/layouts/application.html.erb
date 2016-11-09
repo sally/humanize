@@ -17,9 +17,6 @@
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-
-    <!-- SmoothScroll CDN -->
-    <script src="dist/js/smooth-scroll.js"></script>
   </head>
 
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -33,11 +30,13 @@
         </div>
       </div>
 
-      <div class="nav navbar-nav navbar-right homepage-nav-container">
-        <a href="#about">About</a>
-        <a href="#data">Data</a>
-        <a data-scroll href="#privacy">Privacy</a>
-      </div>
+      <% if current_page?('/') %>
+        <div class="nav navbar-nav navbar-right homepage-nav-container">
+          <a href="#about">About</a>
+          <a href="#data">Data</a>
+          <a data-scroll href="#privacy">Privacy</a>
+        </div>
+      <% end %>
     </div>
   </nav>
 
