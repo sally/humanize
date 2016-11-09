@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/tips', :to => 'index#tips'
   get '/splash', :to => 'index#splash'
+
+  get '/form', :to => 'index#form'
 end
