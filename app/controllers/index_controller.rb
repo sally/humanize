@@ -21,7 +21,7 @@ class IndexController < ApplicationController
 
   end
 
-  def splash
+  def thankyou
 
   end
 
