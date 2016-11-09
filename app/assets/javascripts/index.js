@@ -14,7 +14,7 @@ setInterval(arrowBounce, 800);
 
 // make arrow disappear on
 $(window).scroll(function(){
-    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 35);
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 30);
   });
 
 $(document).on('ready', function(){
