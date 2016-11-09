@@ -12,9 +12,9 @@ var arrowBounce = function() {
 // run the arrowBounce function every 800ms
 setInterval(arrowBounce, 800);
 
-// make arrow disappear on
+// make arrow disappear on scroll down
 $(window).scroll(function(){
-    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 30);
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 10);
   });
 
 $(document).on('ready', function(){
@@ -27,17 +27,3 @@ $(document).on('ready', function(){
     callback: function ( anchor, toggle ) {} // Function to run after scrolling
 });
 })
-
-// we're checking to see if the arrow is up or down, then adding or removing the "lift" class accordingly
-var arrowBounce = function() {
-  var arrow = $(".arrow");
-
-  if (arrow.hasClass("lift")) {
-    arrow.removeClass("lift");
-  } else {
-    arrow.addClass("lift");
-  }
-};
-
-// run the arrowBounce function every 800ms
-setInterval(arrowBounce, 800);

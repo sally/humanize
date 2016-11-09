@@ -25,7 +25,7 @@ section {
   position: relative;
   text-align: center;
 
-  
+
 
   &#bye {
     // background: #fff;
@@ -127,14 +127,14 @@ section {
   }
 
   .inner-container-three{
-    padding: 15% 0 0 0;
+    // padding: 15% 0 0 0;
     margin: 0;
     text-align: center;
     // font-size: 50px;
   }
 
   .inner-container-four{
-    padding: 15% 0 0 0;
+    // padding: 15% 0 0 0;
     margin: 0;
     text-align: center;
   }
@@ -148,6 +148,13 @@ section {
     justify-content: center;
     align-items: center;
     // text-align: center;
+  }
+
+  .inner-container-six{
+    margin-top: 2em;
+    margin-bottom: 3em;
+    font-size: 2.2em;
+    letter-spacing: .025em;
   }
 
   .privacy-header{
