@@ -1,9 +1,9 @@
 module HumanizeService
   include HTTParty
 
-  # API_ENDPOINT = "http://humanize-api.herokuapp.com/api/v1"
+  # Note: All inputs are case sensitive
 
-  API_ENDPOINT = "http://localhost:3000/api/v1"
+  API_ENDPOINT = "http://humanize-api.herokuapp.com/api/v1"
 
   # Method to get all companies
   def self.get_companies
@@ -17,6 +17,7 @@ module HumanizeService
     response = HTTParty.get(url)
   end
 
+  # Helper function to get company id given its name
   def self.get_company_id(name)
     get_company(name)["data"]["id"]
   end
@@ -28,35 +29,23 @@ module HumanizeService
     response = HTTParty.get(url)
   end
 
-  # Method to get responders by session
-  def self.get_session_responders(company_name, session_id)
+  # Overarching method to return all repsonders given a company name and session id
+  # Can also filter responders by attributes: before, age_group, gender, position
+  # Age groups are 1: 18-25, 2: 26-40, 3: 41-65, 4: 65+
+  # Positions are C-Level, Senior, Manager, Junior
+  def self.get_session_responders(company_name, session_id, args = {})
     company_id = get_company_id(company_name)
     url = API_ENDPOINT + "/companies/#{company_id}/sessions/#{session_id}/responders"
-    response = HTTParty.get(url)
+
+    if args.empty?
+      response = HTTParty.get(url)
+    else
+      url += "?"
+      args.keys.each_with_index do |attr, i|
+        url += attr.to_s + "=" + args.values[i].to_s + "&"
+        p url
+      end
+      response = HTTParty.get(url)
+    end
   end
-
-  # Method to get before-responders by sessions
-  def self.get_session_responders_before(company_name, session_id)
-    company_id = get_company_id(company_name)
-    url = API_ENDPOINT + "/companies/#{company_id}/sessions/#{session_id}/responders?before=true"
-    response = HTTParty.get(url)
-  end
-
-  # Method to get after-responders by sessions
-  def self.get_session_responders_after(company_name, session_id)
-    company_id = get_company_id(company_name)
-    url = API_ENDPOINT + "/companies/#{company_id}/sessions/#{session_id}/responders?before=false"
-    response = HTTParty.get(url)
-  end
-
-  # Method to get all gender responses from a session
-  # (get top 4 genders)
-  
-
-
-  # Method to get responses by age group from a session
-  # Age groups: 18-25, 25-40, 40-65, 65+
-
-  # Method to get responders by position level from a session
-  # Position levels: C-Level, Senior, Manager, Staff
 end
