@@ -34,6 +34,8 @@
 }
 
 #ask-container {
+  height: 100%;
+  width: 100%;
   font-size: 24px;
   margin: 0 auto;
   /*text-align: center;*/
@@ -41,8 +43,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1em;
-  /*margin-left: 8em;*/
+  /*margin-bottom: 1em;*/
+  margin-left: 21em;
+  z-index: -1;
 }
 
 #ASK {
@@ -103,4 +106,5 @@ ul li {
   color: #303031;
   margin-left: -1.75em;
   padding-left: -5px;
+  z-index: -1;
 }
