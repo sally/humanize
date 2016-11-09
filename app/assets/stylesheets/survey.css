@@ -176,7 +176,3 @@ input[type="range"]::after {
   right: -1em;
   font-size: .8em;
 }
-
-.Form-rangeValue {
-  color: #666;
-}
