@@ -3,12 +3,13 @@
   <form id="<%= @form_id %>" class="survey"  action="http://humanize-api.herokuapp.com/api/responders" method="post">
     <div id="before-survey-questions">
       <h1 class="survey-header">How do you self-identify?</h1>
+      <h5 class="survey-header-sub"></h5>
 
-      <input class="survey-question" type="text" placeholder="Gender" /required>
+      <input name="[responder]gender" class="survey-question" type="text" placeholder="Gender">
 
-      <input class="survey-question" type="number" placeholder="Age" /required>
+      <input name="[responder]age" class="survey-question" type="number" placeholder="Age">
 
-      <select class="survey-question" style="width: 100%;">
+      <select name="[responder]position" class="survey-question" style="width: 100%;">
         <option selected="true" disabled="disabled">Position</option>
         <option value="1">C-Level</option>
         <option value="2">Senior</option>
@@ -23,19 +24,11 @@
 
     <div id="after-survey-questions">
       <h1 class="survey-header">Let's reflect!</h1>
-      <h5 class="survey-header">(Remember, your responses are completely anonymous.)</h3>
+      <h5 class="survey-header-sub">(Remember, your responses are completely anonymous.)</h3>
 
       <div class="reflection-question-container">
-        I feel supported and accepted by my coworkers.
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-
-          </div>
-          <div class="range-explainer-high">
-
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q1-answer"/>
+        <div class="reflection-question-text">I feel supported and accepted by my coworkers.</div>
+        <input name="response1_value" type="range" min="1" max="7" value="4" list="q1-answer" class="reflection-question" id="reflection-question-one" />
         <datalist id="q1-answer">
           <option>1</option>
           <option>2</option>
@@ -48,14 +41,8 @@
       </div>
 
       <div class="reflection-question-container">
-        My surroundings promote a productive and collaborative environment.
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-          </div>
-          <div class="range-explainer-high">
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q2-answer"/>
+        <div class="reflection-question-text">My surroundings promote a productive and collaborative environment.</div>
+        <input name="response2_value" type="range" min="1" max="7" value="4" list="q2-answer" class="reflection-question" id="reflection-question-two" />
         <datalist id="q2-answer">
           <option>1</option>
           <option>2</option>
@@ -68,14 +55,8 @@
       </div>
 
       <div class="reflection-question-container">
-        I value and respect diversity in gender, age, and culture.
-        <div class="range-explainer">
-          <div class="range-explainer-low">
-          </div>
-          <div class="range-explainer-high">
-          </div>
-        </div>
-        <input type="range" min="1" max="7" value="4" list="q3-answer"/>
+        <div class="reflection-question-text">I value and respect diversity in gender, age, and culture.</div>
+        <input name="response3_value" type="range" min="1" max="7" value="4" list="q3-answer" class="reflection-question" id="reflection-question-three" />
         <datalist id="q3-answer">
           <option>1</option>
           <option>2</option>
@@ -88,15 +69,10 @@
       </div>
 
       <% if pre?(@form_id) %>
-        <input type="hidden" name="redirect-path" value="tips">
-        <button data-toggle="modal" data-target="#thanks-before" id="submit-survey-btn" class="btn  survey-button">Submit</button>
-      <% else %>
-        <input type="hidden" name="redirect-path" value="splash">
-        <button data-toggle="modal" data-target="#thanks-after" id="submit-survey-btn" class="btn  survey-button">Submit</button>
+        <button id="submit-survey-btn" class="btn survey-button"><span>Submit</span></button>
+      <% else %>=
+        <button id="submit-survey-btn" class="btn  survey-button"><span>Submit</span></button>
       <% end %>
     </div> <!-- End of after-survey questions div -->
   </form>
 </div>
-
-<%= render partial: "layouts/thanks_after" %>
-<%= render partial: "layouts/thanks_before" %>

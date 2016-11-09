@@ -10,5 +10,5 @@ $(document).on('ready', function(){
     $('#after-survey-questions').animate({
         left: '50%'
     }, 500);
-});
+  });
 })

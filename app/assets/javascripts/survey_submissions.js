@@ -10,14 +10,37 @@ function surveySubmitListener(formClass){
     event.preventDefault();
     console.log(":D");
 
+    $('#after-survey-questions').animate({
+        left: '-50%'
+      }, 500);
+      // here is where i would animate another container to swoop in, IF I HAD ONE
+
     var form = $(this);
     var data = form.serialize();
-    var redirectPath = $(formClass + ' ' + 'input[name="redirect-path"]').val();
 
-    // console.log(redirectPath);
+    console.log(data);
 
-    setTimeout(function () {
-       window.location.href = "/" + redirectPath;
-    }, 5000);
+    var responderData = form.find('input', 'select').filter('.survey-question').serialize();
+    var responseOneData = form.find('input').filter('#reflection-question-one').serialize();
+    var responseTwoData = form.find('input').filter('#reflection-question-two').serialize();
+    var responseThreeData = form.find('input').filter('#reflection-question-two').serialize();
+
+    console.log(responderData);
+    console.log(responseOneData);
+    console.log(responseTwoData);
+    console.log(responseThreeData);
+
+    // make AJAX request to POST to API
+
+    // change this later to be on AJAX success
+
+    // form had <input type="hidden" name="redirect-path" value="tips"> for pre and <input type="hidden" name="redirect-path" value="splash"> for post
+    // var redirectPath = $(formClass + ' ' + 'input[name="redirect-path"]').val();
+    //
+    // // console.log(redirectPath);
+    //
+    // setTimeout(function () {
+    //    window.location.href = "/" + redirectPath;
+    // }, 5000);
   })
 }
