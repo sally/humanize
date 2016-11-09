@@ -12,10 +12,10 @@ var arrowBounce = function() {
 // run the arrowBounce function every 800ms
 setInterval(arrowBounce, 800);
 
-// make arrow disappear on
-// $(window).scroll(function(){
-//     $(".arrow").css("opacity", 1 - $(window).scrollTop() / 10);
-//   });
+// make arrow disappear on scroll down
+$(window).scroll(function(){
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 10);
+  });
 
 $(document).on('ready', function(){
   smoothScroll.init({
