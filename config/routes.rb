@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   get '/tips', :to => 'index#tips'
-  get '/splash', :to => 'index#splash'
+  get '/thankyou', :to => 'index#thankyou'
 
   get '/form', :to => 'index#form'
 end

@@ -1,0 +1,30 @@
+#thankyou-main {
+  margin-left: 30px;
+  padding: 50px;
+  width: 55%
+}
+
+div h1 {
+  color: #277078;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+div p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#thankyou-content p {
+  color: #303031;
+  font-size: 20px;
+  text-align: justify;
+}
+
+#thankyou-image {
+  float: right;
+  margin-right: 100px;
+  padding: 50px;
+  width: 36%
+}
