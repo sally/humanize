@@ -1,0 +1,66 @@
+$blue: #0099aa;
+$white: #f2f2f2;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h2 {
+  padding: 20% 0 0 0;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+p {
+  text-align: center;
+  color: transparentize($white, .5);
+}
+
+strong {
+  color: #fff;
+}
+
+section {
+  height: 100%;
+  color: white;
+  position: relative;
+  text-align: center;
+
+  &#one {
+    background: $blue;
+  }
+
+  &#two {
+    background: lighten($blue, 5);
+    transition: all 1s;
+
+    &.is-active {
+      background: tomato;
+    }
+  }
+
+  &#three {
+    background: lighten($blue, 10);
+    transition: all 1s;
+
+    &.is-active {
+      background: darken($blue, 10);
+    }
+  }
+
+  &#four {
+    background: darken($blue, 15);
+    transition: all 1s;
+
+    &.is-active {
+      background: #000000;
+    }
+  }
+
+  .inner {
+    margin: 0 auto;
+    max-width: 85%;
+  }
+}
