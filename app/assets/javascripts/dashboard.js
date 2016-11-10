@@ -1,8 +1,10 @@
 $(document).on('ready', function(){
   $('.arrow-left').on('click', function(e){
-    var currentDate = $('#ee-subtitle-container').text();
+    var currentUnformattedDate = $('#ee-subtitle-container').text()
 
-    alert(currentDate);
+    var currentDate = currentUnformattedDate.substring(6,10) + "-" + currentUnformattedDate.substring(0,2) + "-" + currentUnformattedDate.substring(3,5);
+
+    console.log(currentDate);
   });
 })
 
