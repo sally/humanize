@@ -1,5 +1,5 @@
-<div id="ee-title-container"><%= HumanizeHelper.latest_session_topic('Dropbox') %></div>
-<div id="ee-subtitle-container"><%= HumanizeHelper.latest_session_date('Dropbox') %></div>
+<div id="ee-title-container"><%= HumanizeHelper.latest_session_topic('Bloopr') %></div>
+<div id="ee-subtitle-container"><%= HumanizeHelper.latest_session_date('Bloopr') %></div>
 <div id="biggy-container">
   <div id="carousel-container">
       <div id="left-arrow-container">
@@ -271,12 +271,12 @@
         mainHighchartsGenerator(
           {
             chartId: 'main-chart-container',
-            qOneBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 1) %>,
-            qTwoBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 2) %>,
-            qThreeBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 3) %>,
-            qOneAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 1) %>,
-            qTwoAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 2) %>,
-            qThreeAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 3) %>
+            qOneBeforeAvg: <%= HumanizeHelper.avg_before_question('Bloopr', 4, 1) %>,
+            qTwoBeforeAvg: <%= HumanizeHelper.avg_before_question('Bloopr', 4, 2) %>,
+            qThreeBeforeAvg: <%= HumanizeHelper.avg_before_question('Bloopr', 4, 3) %>,
+            qOneAfterAvg: <%= HumanizeHelper.avg_after_question('Bloopr', 4, 1) %>,
+            qTwoAfterAvg: <%= HumanizeHelper.avg_after_question('Bloopr', 4, 2) %>,
+            qThreeAfterAvg: <%= HumanizeHelper.avg_after_question('Bloopr', 4, 3) %>
           }
         );
 
