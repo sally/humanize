@@ -68,11 +68,11 @@ select[class="survey-question"]{
     background-color: transparent;
 }
 
-select:focus{
+select[class="survey-question"]:focus{
   outline: none;
 }
 
-select{
+select[class="survey-question"]{
   color: #949596;
 }
 
