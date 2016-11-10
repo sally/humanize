@@ -128,3 +128,8 @@
   width: 50%;
   margin: 0 auto;
 }
+
+#data-filter{
+  display: flex;
+  justify-content: space-around;
+}
