@@ -34,7 +34,7 @@
   margin: 0;
 }
 
-.homepage-nav-container a, .homepage-nav-container a:hover, .homepage-nav-container a:active{
+.homepage-nav-container a, .homepage-nav-container a:hover, .homepage-nav-container a:active, .homepage-nav-container a:visited{
   padding-left: 3em;
   font-size: 1.2em;
   letter-spacing: 0.05em;
