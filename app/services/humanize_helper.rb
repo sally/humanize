@@ -1,4 +1,5 @@
 module HumanizeHelper
+
   def self.latest_session_id(company_name)
     HumanizeService.get_sessions(company_name)['data'].last['id']
   end
@@ -43,4 +44,5 @@ module HumanizeHelper
 
     (sum / values.length.to_f).round(1)
   end
+  
 end
