@@ -1,3 +1,9 @@
+$(document).on('ready', function(){
+  $('.arrow-left').on('click', function(e){
+    alert("We clicked the left arrow");
+  }); // ends arrow-left listener
+})
+
 // $(document).on('ready page:load', function(){
 //   console.log("R U REDY 4 FREDDY")
 //
