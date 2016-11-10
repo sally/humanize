@@ -1,15 +1,15 @@
-## [Humanize](http://humanizebot.herokuapp.com)
+# [Humanize](http://humanizebot.herokuapp.com)
 
-Engineer empathy and foster emotional intelligence in your workplace. HumanizeBot organizes workshop style sessions and guides participants through specified discussion topics. Results of said sessions can be displayed, and user suggestions for future session topics can be received. Any data received for analysis is anonymous.
+Engineer empathy and foster emotional intelligence in your workplace. HumanizeBot organizes workshop style sessions called Humanize sessions, and guides participants through specified discussion topics. Results of said sessions can be displayed, and user suggestions for future topics can be received. Any data received for analysis is anonymous.
 
-### Authored by
+## Authored by
 
 * Christopher Chan ([@christopherchan35](http://github.com/christopherchan35))
 * Elisabeth Bahadori ([@elliedori](http://github.com/elliedori))
 * Ilaria Varriale ([@HigitusFigitus](http://github.com/HigitusFigitus))
 * Young Ju Park ([@parkyngj](http://github.com/parkyngj))
 
-### MVP functionalities
+## MVP functionalities
 
 * Decoupled architecture consisting of:
   * [Rails back-end API](http://github.com/HigitusFigitus/humanize-api)
@@ -30,16 +30,16 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 * Slack bot/application features
   * Timed messages
   * Responsive, conversational mannerisms
-  * Receives user-generated suggestions for EE topics
+  * Receives user-generated suggestions for Humanize topics
 
-### App Usage Flow
+## App Usage Flow
 
-* An employee is pinged on Slack to be notified of an upcoming EE session.
+* An employee is pinged on Slack to be notified of an upcoming Humanize session.
 
-* An employee takes an anonymous survey (provided by HBot) before the EE session about their emotional/mental state regarding company dynamics.
+* An employee takes an anonymous survey (provided by HBot) before the Humanize session about their emotional/mental state regarding company dynamics.
 
 * An employee is pinged on Slack to be notified of
-  * EE session topic
+  * Humanize session topic
   * Their pairs/groups for the session
   * Some definitions and/or helpful links centered around the topic
 
@@ -51,11 +51,11 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
   * Prompts decompression time (1 minute)
   * Declares end of session
 
-* An employee takes the same anonymous survey as before (provided by HBot) about their emotional/mental state after the conclusion of the EE session
+* An employee takes the same anonymous survey as before (provided by HBot) about their emotional/mental state after the conclusion of the Humanize session
 
 * A Humanize admin (typically HR or C-Level company member) can view the aggregated results and evaluate next steps
 
-### Team Dynamics
+## Team Dynamics
 
 * Schedule
   * 8am - 8pm (very flexible)
@@ -76,5 +76,5 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
   * Horizontal slice
   * Pair for challenging features
   * PR author does not merge their own PR
-  * Collaborate to fix and solve merge conflicts.
-  * Branch for each feature.
+  * Collaborate to fix and solve merge conflicts
+  * Branch for each feature
