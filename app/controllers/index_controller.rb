@@ -3,7 +3,7 @@ class IndexController < ApplicationController
   end
 
   def dashboard
-
+    
   end
 
   def survey
