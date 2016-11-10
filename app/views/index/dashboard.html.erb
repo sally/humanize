@@ -16,7 +16,7 @@
 
   <div id="dropdowns-container">
     <div id="dropdowns-header">
-      Here's some fucking placeholder text
+      Filter by:
     </div>
     <form id="data-filter">
       <select class="dropdown-filter" name="gender">
@@ -30,7 +30,7 @@
       </select>
 
       <select class="dropdown-filter" name="age_group">
-        <option selected="true" disabled="disabled">Age Group</option>
+        <option selected="true" disabled="disabled">Age</option>
         <option value="1">18-25</option>
         <option value="2">26-40</option>
         <option value="3">41-65</option>
@@ -315,6 +315,7 @@
           },
           yAxis: {
               min: 0,
+              max: 7,
               title: {
                   text: 'Average Value'
               }
