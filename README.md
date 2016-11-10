@@ -12,9 +12,9 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 ### MVP functionalities
 
 * Decoupled architecture consisting of:
-  1. [Rails back-end API](http://github.com/HigitusFigitus/humanize-api)
-  2. [Rails front-end web application](http://github.com/parkyngj/humanize-app)
-  3. [Third-party hosted Slack bot/application](https://github.com/elliedori/humanize-bot)
+  * [Rails back-end API](http://github.com/HigitusFigitus/humanize-api)
+  * [Rails front-end web application](http://github.com/parkyngj/humanize-app)
+  * [Third-party hosted Slack bot/application](https://github.com/elliedori/humanize-bot)
 
 * Rails back-end API features
   * receives GET requests for JSONs of requested resources
