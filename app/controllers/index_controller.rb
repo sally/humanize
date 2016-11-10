@@ -62,6 +62,20 @@ class IndexController < ApplicationController
 
   # controller action to retrieve filtered data to feed into dashboard main chart
   def filterdata
-    p HumanizeHelper.avg_before_value_filter("Dropbox", 4, params)
+    @q_one_before_avg = HumanizeHelper.avg_before_question('Dropbox', 4, 1, params)
+    @q_two_before_avg = HumanizeHelper.avg_before_question('Dropbox', 4, 2, params)
+    @q_three_before_avg = HumanizeHelper.avg_before_question('Dropbox', 4, 3, params)
+    @q_one_after_avg = HumanizeHelper.avg_after_question('Dropbox', 4, 1, params)
+    @q_two_after_avg = HumanizeHelper.avg_after_question('Dropbox', 4, 2, params)
+    @q_three_after_avg = HumanizeHelper.avg_after_question('Dropbox', 4, 3, params)
+
+    render partial: 'highchart', locals: {
+      q_one_before_avg: @q_one_before_avg,
+      q_two_before_avg: @q_two_before_avg,
+      q_three_before_avg: @q_three_before_avg,
+      q_one_after_avg: @q_one_after_avg,
+      q_two_after_avg: @q_two_after_avg,
+      q_three_after_avg: @q_three_after_avg
+    }
   end
 end

@@ -43,10 +43,19 @@ $(document).on('ready', function(){
   $('.dropdown-filter').on('change', function(){
     var data = $('#data-filter').serialize();
 
-    request1 = $.ajax({
+    var request1 = $.ajax({
       method: 'POST',
       url: '/filterdata',
       data: data
+    })
+
+    var response1 = request1.done(function(response){
+      console.log(response);
+
+      $('#script-container').empty();
+      $('#script-container').append(response);
+
+      eval(document.getElementById("highcharts-script").innerHTML);
     })
   })
 })
