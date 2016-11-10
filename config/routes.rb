@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'index#index'
 
-  scope '/dropbox' do
+  scope '/bloopr' do
     get '/', :to => 'index#dashboard'
     get '/survey', :to => 'index#survey'
   end
