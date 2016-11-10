@@ -40,5 +40,12 @@ $(document).on('ready', function(){
   });
 
   // listener for change on any select tag on page - AJAX in new data
-  
+  $('.dropdown-filter').on('change', function(){
+    $('#data-filter').serialize());
+
+    request1 = $.ajax({
+      method: 'GET',
+      url: ''
+    })
+  })
 })

@@ -124,15 +124,16 @@
 
 /* Styling for dropdown menu for filtering data */
 #dropdowns-container{
-  width: 50%;
+  width: 21%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #data-filter{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-#data-filter select{
-  width: 15%;
+#data-filter .dropdown-filter{
+  flex-grow: 1;
 }
