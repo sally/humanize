@@ -71,7 +71,13 @@ function surveySubmitListener(formClass){
           $('.survey-container').replaceWith(response);
         })}
       else{
-        $('.survey-container').replaceWith("<img id='thankyou-image' src='<%= 'assets/h-bot-love.png' %>'><div id='thankyou-main'><div><h1>Thank you!</h1></div><div id='thankyou-content'><p>Here at Humanize, we believe in real moments that connect us to other people. We hope you feel the same.</p><p>If you've enjoyed your team's Humanize sessions and believe other would benefit, please help us spread the word!</p><p>Use Humanize to find a new point of view. Because human people are better people.</p></div></div>");
+        $.ajax({
+          method: 'GET',
+          url: '/thankyou'
+        })
+        .done(function(response){
+          $('.survey-container').replaceWith(response);
+        })
       }
     });
 
