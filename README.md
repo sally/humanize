@@ -60,21 +60,21 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 * Schedule
   * 8am - 8pm (very flexible)
 
-* StandUps/Check-ins
+* Stand-Ups
   * 9am
   * 2pm
   * 6pm
 
-* Topics
-  * Daily Goals
+* Check-In Protocol
   * Victories
-  * Blockers + possible resolutions
+  * Blockers & resolutions
+  * Goals
   * Gratitude
-  * Group Hug 💕
+  * Group hug 💕
 
-* Slice/Pairing
-  * Pair of twos.
-  * Horizontal slice.
-  * Person who makes pull request does not merge it themself.
+* Slicing
+  * Horizontal slice
+  * Pair for challenging features
+  * PR author does not merge their own PR
   * Collaborate to fix and solve merge conflicts.
   * Branch for each feature.
