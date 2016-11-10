@@ -61,9 +61,9 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
   * 8am - 8pm (very flexible)
 
 * StandUps/Check-ins
-  1. 9am
-  2. 2pm
-  3. 6pm
+  * 9am
+  * 2pm
+  * 6pm
 
 * Topics
   * Daily Goals
