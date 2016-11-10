@@ -1,7 +1,9 @@
 $(document).on('ready', function(){
   $('.arrow-left').on('click', function(e){
-    alert("We clicked the left arrow");
-  }); // ends arrow-left listener
+    var currentDate = $('#ee-subtitle-container').text();
+
+    alert(currentDate);
+  });
 })
 
 // $(document).on('ready page:load', function(){
