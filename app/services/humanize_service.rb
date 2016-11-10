@@ -29,7 +29,7 @@ module HumanizeService
     response = HTTParty.get(url)
   end
 
-  # Overarching method to return all repsonders given a company name and session id
+  # Overarching method to return all responders given a company name and session id
   # Can also filter responders by attributes: before, age_group, gender, position
   # Age groups are 1: 18-25, 2: 26-40, 3: 41-65, 4: 65+
   # Positions are C-Level, Senior, Manager, Junior
