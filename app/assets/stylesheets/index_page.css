@@ -56,3 +56,8 @@
   margin: 0;
   margin-bottom: -5em;
 }
+
+/* hide icons while they are not scrolled to yet */
+.icon-hidden{
+  color:white;
+}
