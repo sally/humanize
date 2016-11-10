@@ -56,3 +56,25 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
   * Receives user-generated suggestions for EE topics
 
 ### Team Dynamics
+
+* Schedule
+  * 8am - 8pm (very flexible)
+
+* StandUps/Check-ins
+  1. 9am
+  2. 2pm
+  3. 6pm
+
+* Topics
+  * Daily Goals
+  * Victories
+  * Blockers + possible resolutions
+  * Gratitude
+  * Group Hug 💕
+
+* Slice/Pairing
+  * Pair of twos.
+  * Horizontal slice.
+  * Person who makes pull request does not merge it themself.
+  * Collaborate to fix and solve merge conflicts.
+  * Branch for each feature.
