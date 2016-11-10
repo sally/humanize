@@ -4,14 +4,47 @@
   <div id="carousel-container">
       <div id="left-arrow-container">
           <!-- need to make arrow clickable and show another highcharts -->
-        <a href='#'><i class="fa fa-angle-left fa-5x" style="color: black;"></i></a>
+        <a href='#'><i class="fa fa-angle-left fa-5x arrow-left" style="color: black;"></i></a>
       </div>
       <div id="main-chart-container"></div>
       <div id="right-arrow-container">
           <!-- SLAP IN HELPER METHOD TO ADJUST COLOR -->
           <!-- so if false, show arrow with gray, else show arrow with black. needs in line css bc of bootstrap -->
-            <i class="fa fa-angle-right fa-5x" style="color: #f3f3f3;"></i>
+            <i class="fa fa-angle-right fa-5x arrow-right" style="color: #f3f3f3;"></i>
       </div>
+  </div><br><br>
+
+  <div id="dropdowns-container">
+    <div id="dropdowns-header">
+      Here's some fucking placeholder text
+    </div>
+    <form id="data-filter">
+      <select class="dropdown-filter" name="gender">
+        <option selected="true" disabled="disabled">Gender</option>
+        <option>Agender</option>
+        <option>Bigender</option>
+        <option>Female</option>
+        <option>Gender-fluid</option>
+        <option>Male</option>
+        <option>Transgender</option>
+      </select>
+
+      <select class="dropdown-filter" name="age_group">
+        <option selected="true" disabled="disabled">Age Group</option>
+        <option value="1">18-25</option>
+        <option value="2">26-40</option>
+        <option value="3">41-65</option>
+        <option value="4">65+</option>
+      </select>
+
+      <select class="dropdown-filter" name="position">
+        <option selected="true" disabled="disabled">Position</option>
+        <option value="C-Level">C-Level</option>
+        <option value="Senior">Senior</option>
+        <option value="Manager">Manager</option>
+        <option value="Junior">Junior</option>
+      </select>
+    </form>
   </div><br><br>
 
   <div id="overall-charts-container">
@@ -35,26 +68,215 @@
 
 <div id="script-container">
   <script id="highcharts-script">
-  $(document).on('ready page:load', function(){
-    console.log("R U REDY 4 FREDDY")
+  Highcharts.theme = {
 
-    $.ajax({
-      method: 'GET',
-      url: 'http://humanize-api-test.herokuapp.com/tests/5'
-      })
-    .done(function(response){
-        console.log('success');
-        console.log(response);
-        console.log(response.test.testing_1);
+  	colors: ['#BED2E9', '#DCE8EB', '#C4DDD6', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+  		'#55BF3B', '#DF5353', '#7798BF', '#aaeeee', '#6E6FB'],
+  	chart: {
+  		backgroundColor: '#FFF',
+  		style: {
+  			fontFamily: '\'Helvetica\', sans-serif'
+  		},
+  		plotBorderColor: '#606063'
+  	},
+  	title: {
+  		style: {
+  			color: '#000',
+  			textTransform: 'uppercase',
+  			fontSize: '20px'
+  		}
+  	},
+  	subtitle: {
+  		style: {
+  			color: '#000',
+  			textTransform: 'uppercase'
+  		}
+  	},
+  	xAxis: {
+  		gridLineColor: '#707073',
+  		labels: {
+  			style: {
+  				color: '#000'
+  			}
+  		},
+  		lineColor: '#707073',
+  		minorGridLineColor: '#505053',
+  		tickColor: '#707073',
+  		title: {
+  			style: {
+  				color: '#A0A0A3'
 
-        var title = response.test.testing_1;
-        var dummyValue = response.test.testing_2;
+  			}
+  		}
+  	},
+  	yAxis: {
+  		gridLineColor: '#707073',
+  		labels: {
+  			style: {
+  				color: '#000'
+  			}
+  		},
+  		lineColor: '#707073',
+  		minorGridLineColor: '#505053',
+  		tickColor: '#707073',
+  		tickWidth: 1,
+  		title: {
+  			style: {
+  				color: '#A0A0A3'
+  			}
+  		}
+  	},
+  	tooltip: {
+  		backgroundColor: 'rgba(0, 0, 0, 0.85)',
+  		style: {
+  			color: '#F0F0F0'
+  		}
+  	},
+  	plotOptions: {
+  		series: {
+        shadow: true,
+  			dataLabels: {
+  				color: '#B0B0B3'
+  			},
+  			marker: {
+  				lineColor: '#333'
+  			}
+  		},
+  		boxplot: {
+  			fillColor: '#505053'
+  		},
+  		candlestick: {
+  			lineColor: 'white'
+  		},
+  		errorbar: {
+  			color: 'white'
+  		}
+  	},
+  	legend: {
+  		itemStyle: {
+  			color: '#000'
+  		},
+  		itemHoverStyle: {
+  			color: '#FFF'
+  		},
+  		itemHiddenStyle: {
+  			color: '#606063'
+  		}
+  	},
+  	credits: {
+  		// style: {
+  		// 	color: '#666'
+  		// }
+      enabled: false
+  	},
+    exporting: { enabled: false },
+  	labels: {
+  		style: {
+  			color: '#707073'
+  		}
+  	},
+
+  	drilldown: {
+  		activeAxisLabelStyle: {
+  			color: '#F0F0F3'
+  		},
+  		activeDataLabelStyle: {
+  			color: '#F0F0F3'
+  		}
+  	},
+
+  	navigation: {
+  		buttonOptions: {
+  			symbolStroke: '#DDDDDD',
+  			theme: {
+  				fill: '#505053'
+  			}
+  		}
+  	},
+
+  	// scroll charts
+  	rangeSelector: {
+  		buttonTheme: {
+  			fill: '#505053',
+  			stroke: '#000000',
+  			style: {
+  				color: '#CCC'
+  			},
+  			states: {
+  				hover: {
+  					fill: '#707073',
+  					stroke: '#000000',
+  					style: {
+  						color: 'white'
+  					}
+  				},
+  				select: {
+  					fill: '#000003',
+  					stroke: '#000000',
+  					style: {
+  						color: 'white'
+  					}
+  				}
+  			}
+  		},
+  		inputBoxBorderColor: '#505053',
+  		inputStyle: {
+  			backgroundColor: '#333',
+  			color: 'silver'
+  		},
+  		labelStyle: {
+  			color: 'silver'
+  		}
+  	},
+
+  	navigator: {
+  		handles: {
+  			backgroundColor: '#666',
+  			borderColor: '#AAA'
+  		},
+  		outlineColor: '#CCC',
+  		maskFill: 'rgba(255,255,255,0.1)',
+  		series: {
+  			color: '#7798BF',
+  			lineColor: '#A6C7ED'
+  		},
+  		xAxis: {
+  			gridLineColor: '#505053'
+  		}
+  	},
+
+  	scrollbar: {
+  		barBackgroundColor: '#808083',
+  		barBorderColor: '#808083',
+  		buttonArrowColor: '#CCC',
+  		buttonBackgroundColor: '#606063',
+  		buttonBorderColor: '#606063',
+  		rifleColor: '#FFF',
+  		trackBackgroundColor: '#404043',
+  		trackBorderColor: '#404043'
+  	},
+
+  	// special colors for some of the
+  	legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+  	background2: '#505053',
+  	dataLabelsColor: '#B0B0B3',
+  	textColor: '#C0C0C0',
+  	contrastTextColor: '#F0F0F3',
+  	maskColor: 'rgba(255,255,255,0.3)'
+  };
+
+  // Apply the theme
+  Highcharts.setOptions(Highcharts.theme);
 
         mainHighchartsGenerator(
           {
             chartId: 'main-chart-container',
-            titleText: title,
-            valueInt: dummyValue
+            qOneBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 1) %>,
+            qTwoBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 2) %>,
+            qThreeBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 3) %>,
+            qOneAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 1) %>,
+            qTwoAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 2) %>,
+            qThreeAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 3) %>
           }
         );
 
@@ -65,13 +287,6 @@
         activityGaugeHighchartsGenerator({
           chartId: 'activity-gauge-container'
         })
-
-      })
-    .fail(function(response){
-        console.log('fail');
-        console.log(response);
-      })
-  });
 
   // function to generate main chart
   function mainHighchartsGenerator(args) {
@@ -104,6 +319,9 @@
                   text: 'Average Value'
               }
           },
+          legend: {
+            verticalAlign: 'top'
+          },
           tooltip: {
               headerFormat: '<span style="font-size:15px, width: 5em;">{series.question}</span><table>',
               // pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
@@ -125,12 +343,12 @@
           },
           series: [{
               name: 'Before-survey',
-              data: [args.valueInt, args.valueInt, args.valueInt],
+              data: [args.qOneBeforeAvg, args.qTwoBeforeAvg, args.qThreeBeforeAvg],
               question: ["Q1", "Q2", "Q3"]
 
           }, {
               name: 'After-survey',
-              data: [5, 4, 5]
+              data: [args.qOneAfterAvg, args.qTwoAfterAvg, args.qThreeAfterAvg]
 
           }
 
@@ -306,5 +524,7 @@
 
 
   };
+
+
   </script>
 </div>

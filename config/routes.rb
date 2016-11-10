@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/tips', :to => 'index#tips'
   get '/thankyou', :to => 'index#thankyou'
 
-  get '/form', :to => 'index#form'
+  get '/sessioninfo', :to => 'index#sessioninfo'
+  get '/sessionheader', :to => 'index#sessionheader'
+  post '/filterdata', :to => 'index#filterdata'
 end

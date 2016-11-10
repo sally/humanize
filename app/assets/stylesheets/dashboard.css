@@ -121,3 +121,19 @@
 #extra-space {
   height: 10em;
 }
+
+/* Styling for dropdown menu for filtering data */
+#dropdowns-container{
+  width: 21%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#data-filter{
+  display: flex;
+  justify-content: space-between;
+}
+
+#data-filter .dropdown-filter{
+  flex-grow: 1;
+}
