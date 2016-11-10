@@ -121,3 +121,10 @@
 #extra-space {
   height: 10em;
 }
+
+/* Styling for dropdown menu for filtering data */
+#dropdowns-container{
+  border: 1px solid red;
+  width: 50%;
+  margin: 0 auto;
+}
