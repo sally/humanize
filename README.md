@@ -12,25 +12,25 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 ### MVP functionalities
 
 * Decoupled architecture consisting of:
-1. [Rails back-end API](http://github.com/HigitusFigitus/humanize-api)
-2. [Rails front-end web application](http://github.com/parkyngj/humanize-app)
-3. [Third-party hosted Slack bot/application](https://github.com/elliedori/humanize-bot)
+  1. [Rails back-end API](http://github.com/HigitusFigitus/humanize-api)
+  2. [Rails front-end web application](http://github.com/parkyngj/humanize-app)
+  3. [Third-party hosted Slack bot/application](https://github.com/elliedori/humanize-bot)
 
 * Rails back-end API features
-* receives GET requests for JSONs of requested resources
-* builds customized results based on parsing of appropriate query strings
-* receives POST requests for creation of resources in database
-* cursory documentation
+  * receives GET requests for JSONs of requested resources
+    * builds customized results based on parsing of appropriate query strings
+  * receives POST requests for creation of resources in database
+  * cursory documentation
 
 * Rails front-end web app features
-* front page for displaying further information about HBot and engineering empathy
-* initializes creation of resources in back-end API database from user input
-* integrates data visualization from parsed data from back-end API
+  * front page for displaying further information about HBot and engineering empathy
+  * initializes creation of resources in back-end API database from user input
+  * integrates data visualization from parsed data from back-end API
 
 * Slack bot/application features
-* Timed messages
-* Responsive, conversational mannerisms
-* Receives user-generated suggestions for EE topics
+  * Timed messages
+  * Responsive, conversational mannerisms
+  * Receives user-generated suggestions for EE topics
 
 ### App Usage Flow
 
