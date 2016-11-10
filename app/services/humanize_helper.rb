@@ -44,5 +44,10 @@ module HumanizeHelper
 
     (sum / values.length.to_f).round(1)
   end
-  
+
+  def self.get_prev_session(company_name, date)
+    current_session_id = HumanizeService.get_sessions(company_name)['data'].find {|session| session['date'] == date }['id']
+
+    HumanizeService.get_sessions(company_name)['data'][current_session_id - 2]
+  end
 end

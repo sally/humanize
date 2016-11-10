@@ -4,7 +4,10 @@ $(document).on('ready', function(){
 
     var currentDate = currentUnformattedDate.substring(6,10) + "-" + currentUnformattedDate.substring(0,2) + "-" + currentUnformattedDate.substring(3,5);
 
-    console.log(currentDate);
+    request = $.ajax({
+      method: 'GET',
+      url: '/sessioninfo?current_date=' + currentDate
+    })
   });
 })
 

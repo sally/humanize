@@ -3,7 +3,7 @@ class IndexController < ApplicationController
   end
 
   def dashboard
-    
+
   end
 
   def survey
@@ -25,14 +25,11 @@ class IndexController < ApplicationController
 
   end
 
-  def form
-    if params[:type] == 'before'
-      @form_id = "before-survey-form"
-    elsif params[:type] == 'after'
-      @form_id = "after-survey-form"
-    else
-      # error msg
-      render "layouts/404"
-    end
+  def sessioninfo
+    current_date = params[:current_date]
+
+
   end
+
+
 end
