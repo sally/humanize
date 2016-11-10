@@ -3,8 +3,12 @@
 mainHighchartsGenerator(
   {
     chartId: 'main-chart-container',
-    titleText: title,
-    valueInt: dummyValue
+    qOneBeforeAvg: <%= q_one_before_avg %>,
+    qTwoBeforeAvg: <%= q_two_before_avg %>,
+    qThreeBeforeAvg: <%= q_three_before_avg %>,
+    qOneAfterAvg: <%= q_one_after_avg %>,
+    qTwoAfterAvg: <%= q_two_after_avg %>,
+    qThreeAfterAvg: <%= q_three_after_avg %>
   }
 )
 
@@ -60,12 +64,12 @@ function mainHighchartsGenerator(args) {
         },
         series: [{
             name: 'Before-survey',
-            data: [args.valueInt, args.valueInt, args.valueInt],
+            data: data: [args.qOneBeforeAvg, args.qTwoBeforeAvg, args.qThreeBeforeAvg],
             question: ["Q1", "Q2", "Q3"]
 
         }, {
             name: 'After-survey',
-            data: [5, 4, 5]
+            data: [args.qOneAfterAvg, args.qTwoAfterAvg, args.qThreeAfterAvg]
 
         }
 

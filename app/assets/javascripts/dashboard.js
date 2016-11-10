@@ -8,6 +8,10 @@ $(document).on('ready', function(){
       method: 'GET',
       url: '/sessioninfo?current_date=' + currentDate
     })
+
+    response = request.done(function(response){
+      console.log(response);
+    })
   });
 })
 
