@@ -124,7 +124,6 @@
 
 /* Styling for dropdown menu for filtering data */
 #dropdowns-container{
-  border: 1px solid red;
   width: 50%;
   margin: 0 auto;
 }
@@ -132,4 +131,8 @@
 #data-filter{
   display: flex;
   justify-content: space-around;
+}
+
+#data-filter select{
+  width: 15%;
 }
