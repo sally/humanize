@@ -63,8 +63,13 @@ function surveySubmitListener(formClass){
 
       /* Depending on whether the survey was before or after EE session, inject the appropriate page */
       if(responderBefore){
-        $('.survey-container').replaceWith("<div id='tips-header'><p><h1 id='helpful-tip'>Helpful Tips for EQ Sessions</h1></p></div><br><div id='ask-container'><p id='ASK'>ASK Feedback</p><div id='ee-description'><ul id='ask-list'><li>Actionable: tell your partner what was done well and what could be better in the future.</li><li>Specific: help your partner by giving them a specific way to improve rather than a blanket statement.</li><li>Kind: getting feedback is hard. Remember to communicate in a way that is gentle and kind.</li><li>'I feel _____ when you _____.'</li></ul></div></div><img src='h-bot-friends.png' id='bot-friends'><div id='listening-container'><p id='active-listening'>Active Listening</p><div id='listening-container'><ul id='listening-list'><li>Look at the speaker directly.</li><li>Put aside distracting thoughts.</li><li>Maintain an open and inviting posture.</li><li>Reflect back to the speaker what you heard before going into your response.</li></ul></div></div>")
-        }
+        $.ajax({
+          method: 'GET',
+          url: '/tips'
+        })
+        .done(function(response){
+          $('.survey-container').replaceWith(response);
+        })}
       else{
         $('.survey-container').replaceWith("<img id='thankyou-image' src='<%= 'assets/h-bot-love.png' %>'><div id='thankyou-main'><div><h1>Thank you!</h1></div><div id='thankyou-content'><p>Here at Humanize, we believe in real moments that connect us to other people. We hope you feel the same.</p><p>If you've enjoyed your team's Humanize sessions and believe other would benefit, please help us spread the word!</p><p>Use Humanize to find a new point of view. Because human people are better people.</p></div></div>");
       }

@@ -18,7 +18,9 @@ class IndexController < ApplicationController
   end
 
   def tips
-
+    if request.xhr?
+      render layout: false
+    end
   end
 
   def thankyou
