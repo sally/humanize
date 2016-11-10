@@ -47,5 +47,16 @@ class IndexController < ApplicationController
     }
   end
 
+  def sessionheader
+    current_date = params[:current_date]
+
+    prev_session = HumanizeHelper.get_prev_session('Dropbox', current_date)
+
+    topic = prev_session['topic']
+    date = prev_session['date']
+
+    render text: topic + "&" + date
+  end
+
 
 end

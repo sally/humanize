@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/thankyou', :to => 'index#thankyou'
 
   get '/sessioninfo', :to => 'index#sessioninfo'
+  get '/sessionheader', :to => 'index#sessionheader'
 end

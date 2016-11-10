@@ -1,16 +1,36 @@
 $(document).on('ready', function(){
   $('.arrow-left').on('click', function(e){
+    event.preventDefault();
+
     var currentUnformattedDate = $('#ee-subtitle-container').text()
 
     var currentDate = currentUnformattedDate.substring(6,10) + "-" + currentUnformattedDate.substring(0,2) + "-" + currentUnformattedDate.substring(3,5);
 
-    request = $.ajax({
+    request1 = $.ajax({
       method: 'GET',
       url: '/sessioninfo?current_date=' + currentDate
-    })
+    });
 
-    response = request.done(function(response){
+    response1 = request1.done(function(response){
       console.log(response);
+
+      $('#script-container').empty();
+      $('#script-container').append(response);
+
+      eval(document.getElementById("highcharts-script").innerHTML);
+    });
+
+    request2 = $.ajax({
+      method: 'GET',
+      url: '/sessionheader?current_date=' + currentDate
+    });
+
+    response2 = request2.done(function(response){
+      var response_array = response.split("&")
+      var title = response_array[0]
+      var date = response_array[1]
+      $('#ee-title-container').text(title);
+      $('#ee-subtitle-container').text(date);
     })
   });
 })
