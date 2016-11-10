@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get '/sessioninfo', :to => 'index#sessioninfo'
   get '/sessionheader', :to => 'index#sessionheader'
+  post '/filterdata', :to => 'index#filterdata'
 end

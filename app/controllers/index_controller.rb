@@ -25,6 +25,7 @@ class IndexController < ApplicationController
 
   end
 
+  # controller action to return session info to feed into dashboard main chart
   def sessioninfo
     current_date = params[:current_date]
 
@@ -47,6 +48,7 @@ class IndexController < ApplicationController
     }
   end
 
+  # controller action to retrieve session title and date to feed into dashboard
   def sessionheader
     current_date = params[:current_date]
 
@@ -58,5 +60,8 @@ class IndexController < ApplicationController
     render text: topic + "&" + date
   end
 
-
+  # controller action to retrieve filtered data to feed into dashboard main chart
+  def filterdata
+    p HumanizeHelper.avg_before_value_filter("Dropbox", 4, params)
+  end
 end
