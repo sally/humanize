@@ -9,6 +9,29 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 * Ilaria Varriale ([@HigitusFigitus](http://github.com/HigitusFigitus))
 * Young Ju Park ([@parkyngj](http://github.com/parkyngj))
 
+### MVP functionalities
+
+* Decoupled architecture consisting of:
+1. (Rails back-end API)[http://github.com/HigitusFigitus/humanize-api]
+2. (Rails front-end web application)[http://github.com/parkyngj/humanize-app]
+3. (Third-party hosted Slack bot/application)[https://github.com/elliedori/humanize-bot]
+
+* Rails back-end API features
+* receives GET requests for JSONs of requested resources
+* builds customized results based on parsing of appropriate query strings
+* receives POST requests for creation of resources in database
+* cursory documentation
+
+* Rails front-end web app features
+* front page for displaying further information about HBot and engineering empathy
+* initializes creation of resources in back-end API database from user input
+* integrates data visualization from parsed data from back-end API
+
+* Slack bot/application features
+* Timed messages
+* Responsive, conversational mannerisms
+* Receives user-generated suggestions for EE topics
+
 ### App Usage Flow
 
 * An employee is pinged on Slack to be notified of an upcoming EE session.
@@ -31,29 +54,6 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
 * An employee takes the same anonymous survey as before (provided by HBot) about their emotional/mental state after the conclusion of the EE session
 
 * A Humanize admin (typically HR or C-Level company member) can view the aggregated results and evaluate next steps
-
-### MVP functionalities
-
-* Decoupled architecture consisting of:
-  1. Rails back-end API
-  2. Rails front-end web application
-  3. Third-party hosted Slack bot/application
-
-* Rails back-end API features
-  * receives GET requests for JSONs of requested resources
-    * builds customized results based on parsing of appropriate query strings
-  * receives POST requests for creation of resources in database
-  * cursory documentation
-
-* Rails front-end web app features
-  * front page for displaying further information about HBot and engineering empathy
-  * initializes creation of resources in back-end API database from user input
-  * integrates data visualization from parsed data from back-end API
-
-* Slack bot/application features
-  * Timed messages
-  * Responsive, conversational mannerisms
-  * Receives user-generated suggestions for EE topics
 
 ### Team Dynamics
 
