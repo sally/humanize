@@ -35,26 +35,16 @@
 
 <div id="script-container">
   <script id="highcharts-script">
-  $(document).on('ready page:load', function(){
-    console.log("R U REDY 4 FREDDY")
-
-    $.ajax({
-      method: 'GET',
-      url: 'http://humanize-api-test.herokuapp.com/tests/5'
-      })
-    .done(function(response){
-        console.log('success');
-        console.log(response);
-        console.log(response.test.testing_1);
-
-        var title = response.test.testing_1;
-        var dummyValue = response.test.testing_2;
 
         mainHighchartsGenerator(
           {
             chartId: 'main-chart-container',
-            titleText: title,
-            valueInt: dummyValue
+            qOneBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 1) %>,
+            qTwoBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 2) %>,
+            qThreeBeforeAvg: <%= HumanizeHelper.avg_before_question('Dropbox', 4, 3) %>,
+            qOneAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 1) %>,
+            qTwoAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 2) %>,
+            qThreeAfterAvg: <%= HumanizeHelper.avg_after_question('Dropbox', 4, 3) %>
           }
         );
 
@@ -65,13 +55,6 @@
         activityGaugeHighchartsGenerator({
           chartId: 'activity-gauge-container'
         })
-
-      })
-    .fail(function(response){
-        console.log('fail');
-        console.log(response);
-      })
-  });
 
   // function to generate main chart
   function mainHighchartsGenerator(args) {
@@ -125,12 +108,12 @@
           },
           series: [{
               name: 'Before-survey',
-              data: [args.valueInt, args.valueInt, args.valueInt],
+              data: [args.qOneBeforeAvg, args.qTwoBeforeAvg, args.qThreeBeforeAvg],
               question: ["Q1", "Q2", "Q3"]
 
           }, {
               name: 'After-survey',
-              data: [5, 4, 5]
+              data: [args.qOneAfterAvg, args.qTwoAfterAvg, args.qThreeAfterAvg]
 
           }
 
