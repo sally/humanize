@@ -36,6 +36,7 @@ $(document).on('ready', function(){
       $('#ee-title-container').text(title);
       $('#ee-subtitle-container').text(date);
       $('.arrow-right').css('color', '#000');
+      $('#data-filter')[0].reset();
     })
   });
 
