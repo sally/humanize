@@ -42,7 +42,7 @@ section {
   }
 
   .inner-container-one{
-    padding-top: 4em;
+    padding-top: 5.5vh;
     // padding: 20% 0 0 0;
     margin: 0;
     text-align: center;
@@ -57,7 +57,7 @@ section {
     // border: 1px solid #000;
     text-align: left;
     text-justify: inter-word;
-    font-size: 3em;
+    font-size: 2.5vw;
     line-height: 1.23em;
     letter-spacing: 0.03em;
   }
@@ -79,7 +79,6 @@ section {
     justify-content: center;
     width: 85%;
     margin: 0 auto;
-    margin-top: 5em;
     // border: 1px solid red;
   }
 
@@ -95,7 +94,7 @@ section {
   }
 
   .info-icon{
-    font-size: 7em;
+    font-size: 6vw;
     margin: 0;
     margin-left: 0;
     // padding: 0 1em;
@@ -109,18 +108,28 @@ section {
     text-align: left;
     padding: 0 1.75em;
     width: 75%;
-    font-size: 2.3em;
+    font-size: 1.85vw;
     line-height: 1.2em;
     letter-spacing: .05em;
   }
 
   .inner-container-three{
-    margin-top: -.25em;
+    // margin-top: -.25em;
     text-align: center;
     // font-size: 50px;
-    font-size: 2.3em;
+    font-size: 1.9vw;
     line-height: 1.2em;
     letter-spacing: .05em;
+  }
+
+  #hbot_plus_slack{
+    width: 50vw;
+    height: auto;
+  }
+
+  #slack_circle{
+    width: 25vw;
+    height: auto;
   }
 
   .inner-container-four{
@@ -133,12 +142,17 @@ section {
   }
 
   .data-text{
-    font-size: 1.1em;
+    font-size: 2.2vw;
     width: 70%;
     margin: 0 auto;
     letter-spacing: .01em;
     line-height: 1.3em;
     padding-bottom: 1em;
+  }
+
+  #data_graphs{
+    width:40vw;
+    height:auto;
   }
 
   .inner-container-five{
@@ -162,20 +176,25 @@ section {
     margin-top: 2em;
     margin-bottom: 1.5em;
     color: #303031;
-    font-size: 2.35em;
+    font-size: 2vw;
     letter-spacing: .025em;
     font-weight: bold;
   }
 
+  #h-bot-head{
+    width: 32vw;
+    height: auto;
+  }
+
   .privacy-header{
-    font-size: 3.5em;
+    font-size: 3vw;
     margin-bottom: 1em;
     text-align: left;
     width: 60%;
   }
 
   .privacy-text{
-    font-size: 2.25em;
+    font-size: 2vw;
     width: 60%;
     text-align: left;
     letter-spacing: .025em;

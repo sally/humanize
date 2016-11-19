@@ -50,16 +50,12 @@
 /* CSS for dividers */
 .stripe{
   width: 100%;
-  margin-top: -13.5em;
+  margin-top: -10vh;
 }
 
 .first-stripe{
   margin: 0;
-  margin-bottom: -5em;
-}
-
-#stripe-three{
-  padding-top: 3.5em;
+  margin-bottom: 0vh;
 }
 
 /* hide icons while they are not scrolled to yet */
