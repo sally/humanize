@@ -84,3 +84,9 @@ Engineer empathy and foster emotional intelligence in your workplace. HumanizeBo
   * PR author does not merge their own PR
   * Collaborate to fix and solve merge conflicts
   * Branch for each feature
+
+## Special Thanks
+
+A whole-hearted thank you to Ilya Parizhsky, counselor at Dev Bootcamp, for providing us valuable feedback and material for our project.
+
+We would also like to thank all of the DBC teachers, mentors, Bobolinks, Coyotes, and Wolves of SF 2016 for their endless support and encouragement!
