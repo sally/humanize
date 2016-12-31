@@ -95,9 +95,6 @@ Highcharts.theme = {
     }
   },
   credits: {
-    // style: {
-    // 	color: '#666'
-    // }
     enabled: false
   },
   exporting: { enabled: false },
@@ -125,7 +122,6 @@ Highcharts.theme = {
     }
   },
 
-  // scroll charts
   rangeSelector: {
     buttonTheme: {
       fill: '#505053',
@@ -187,7 +183,6 @@ Highcharts.theme = {
     trackBorderColor: '#404043'
   },
 
-  // special colors for some of the
   legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
   background2: '#505053',
   dataLabelsColor: '#B0B0B3',
@@ -214,8 +209,6 @@ mainHighchartsGenerator(
 
 // function to generate main chart
 function mainHighchartsGenerator(args) {
-    // step 1: AJAX request (on page load)
-    // step 2: create highchart in the callback
     Highcharts.chart(args.chartId, {
         chart: {
             type: 'column'
@@ -249,17 +242,9 @@ function mainHighchartsGenerator(args) {
         },
         tooltip: {
             headerFormat: '<span style="font-size:15px, width: 5em;">{series.question}</span><table>',
-            // pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                // '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
             footerFormat: '</table>',
-            // shared: true,
             useHTML: true
         },
-        // tooltip: {
-        //   formatter: function() {
-        //     return 'I feel supported and accepted by my coworkers.'
-        //   }
-        // },
         plotOptions: {
             column: {
                 pointPadding: 0.2,
@@ -276,12 +261,6 @@ function mainHighchartsGenerator(args) {
             data: [args.qOneAfterAvg, args.qTwoAfterAvg, args.qThreeAfterAvg]
 
         }
-
-        // , {
-        //     name: 'Something else',
-        //     data: [2, 3, 6]
-        //
-        // }
       ]
    }
   );
@@ -375,17 +354,17 @@ function activityGaugeHighchartsGenerator(args) {
         pane: {
             startAngle: 0,
             endAngle: 360,
-            background: [{ // Track for Move
+            background: [{
                 outerRadius: '112%',
                 innerRadius: '88%',
                 backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0.3).get(),
                 borderWidth: 0
-            }, { // Track for Exercise
+            }, {
                 outerRadius: '87%',
                 innerRadius: '63%',
                 backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0.3).get(),
                 borderWidth: 0
-            }, { // Track for Stand
+            }, {
                 outerRadius: '62%',
                 innerRadius: '38%',
                 backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.3).get(),
@@ -441,9 +420,6 @@ function activityGaugeHighchartsGenerator(args) {
         }]
     },
 
-    /**
-     * In the chart load callback, add icons on top of the circular shapes
-     */
     function callback() {
     });
 };
