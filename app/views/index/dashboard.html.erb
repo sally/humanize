@@ -3,13 +3,10 @@
 <div id="biggy-container">
   <div id="carousel-container">
       <div id="left-arrow-container">
-          <!-- need to make arrow clickable and show another highcharts -->
         <a href='#'><i class="fa fa-angle-left fa-5x arrow-left" style="color: black;"></i></a>
       </div>
       <div id="main-chart-container"></div>
       <div id="right-arrow-container">
-          <!-- SLAP IN HELPER METHOD TO ADJUST COLOR -->
-          <!-- so if false, show arrow with gray, else show arrow with black. needs in line css bc of bootstrap -->
             <i class="fa fa-angle-right fa-5x arrow-right" style="color: #f3f3f3;"></i>
       </div>
   </div><br><br>
@@ -256,7 +253,6 @@
   		trackBorderColor: '#404043'
   	},
 
-  	// special colors for some of the
   	legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
   	background2: '#505053',
   	dataLabelsColor: '#B0B0B3',
@@ -290,8 +286,6 @@
 
   // function to generate main chart
   function mainHighchartsGenerator(args) {
-      // step 1: AJAX request (on page load)
-      // step 2: create highchart in the callback
       Highcharts.chart(args.chartId, {
           chart: {
               type: 'column'
@@ -308,7 +302,6 @@
               labels: {
                 style: {
                   fontSize: '16px',
-                  // fontWeight: 'bold'
                 }
               },
               crosshair: true
@@ -325,17 +318,10 @@
           },
           tooltip: {
               headerFormat: '<span style="font-size:15px, width: 5em;">{series.question}</span><table>',
-              // pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                  // '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
               footerFormat: '</table>',
               // shared: true,
               useHTML: true
           },
-          // tooltip: {
-          //   formatter: function() {
-          //     return 'I feel supported and accepted by my coworkers.'
-          //   }
-          // },
           plotOptions: {
               column: {
                   pointPadding: 0.2,
@@ -445,17 +431,17 @@
           pane: {
               startAngle: 0,
               endAngle: 360,
-              background: [{ // Track for Move
+              background: [{
                   outerRadius: '112%',
                   innerRadius: '88%',
                   backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0.3).get(),
                   borderWidth: 0
-              }, { // Track for Exercise
+              }, {
                   outerRadius: '87%',
                   innerRadius: '63%',
                   backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0.3).get(),
                   borderWidth: 0
-              }, { // Track for Stand
+              }, {
                   outerRadius: '62%',
                   innerRadius: '38%',
                   backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.3).get(),
@@ -511,15 +497,10 @@
           }]
       },
 
-      /**
-       * In the chart load callback, add icons on top of the circular shapes
-       */
       function callback() {
       });
 
 
   };
-
-
   </script>
 </div>

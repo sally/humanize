@@ -61,4 +61,5 @@ module HumanizeHelper
 
     HumanizeService.get_sessions(company_name)['data'][current_session_id - 2]
   end
+  
 end

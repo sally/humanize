@@ -1,4 +1,5 @@
 module IndexHelper
+
   def pre?(form_id)
     if @form_id == "before-survey-form"
       true
@@ -6,4 +7,5 @@ module IndexHelper
       false
     end
   end
+  
 end

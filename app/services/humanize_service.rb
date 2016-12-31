@@ -1,4 +1,5 @@
 module HumanizeService
+
   include HTTParty
 
   # Note: All inputs are case sensitive
@@ -33,6 +34,7 @@ module HumanizeService
   # Can also filter responders by attributes: before, age_group, gender, position
   # Age groups are 1: 18-25, 2: 26-40, 3: 41-65, 4: 65+
   # Positions are C-Level, Senior, Manager, Junior
+  # See documentation at http://github.com/HigitusFigitus/humanize-api for full options
   def self.get_session_responders(company_name, session_id, args = {})
     company_id = get_company_id(company_name)
     url = API_ENDPOINT + "/companies/#{company_id}/sessions/#{session_id}/responders"
@@ -43,9 +45,11 @@ module HumanizeService
       url += "?"
       args.keys.each_with_index do |attr, i|
         url += attr.to_s + "=" + args.values[i].to_s + "&"
-        p url
+
+        url
       end
       response = HTTParty.get(url)
     end
   end
+  
 end
