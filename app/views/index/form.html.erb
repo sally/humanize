@@ -1,18 +1,8 @@
-<!-- <form class="test" action="https://humanize-api.herokuapp.com/api/v1/companies/2/sessions/5/responders" method="post">
-  Gender: <input type="text" name="gender">
-  Age: <input type="text" name="age">
-  Position: <input type="text" name="position">
-  <input type="submit" value="submit">
-</form> -->
-
-
 <form method="post" action="https://humanize-api.herokuapp.com/api/v1/companies/2/sessions/5/responders">
   Gender: <input type="text" name="[responder]gender">
   Age: <input type="number" name="[responder]age">
   Position: <input type="text" name="[responder]position">
   <input type="hidden" name="[responder]session_id" value=1>
-
-
 
   <input type="submit">
 </form>
